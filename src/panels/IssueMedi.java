@@ -16,6 +16,9 @@ public class IssueMedi extends javax.swing.JPanel {
      */
     public IssueMedi() {
         initComponents();
+        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField3.setBackground(new java.awt.Color(0,0,0,1));
     }
 
     /**
@@ -49,9 +52,17 @@ public class IssueMedi extends javax.swing.JPanel {
 
         jLabel1.setText("Patient ID:-");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 60, -1));
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField1.setOpaque(false);
         add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 110, -1));
 
         jButton1.setText("Get medi list");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -89,10 +100,16 @@ public class IssueMedi extends javax.swing.JPanel {
         jScrollPane3.setViewportView(jTable1);
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 450, 200));
+
+        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField2.setOpaque(false);
         add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 50, -1));
 
         jLabel3.setText("count:-");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 60, 20));
+
+        jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField3.setOpaque(false);
         add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 100, -1));
 
         jLabel4.setText("Medi Name:-");
@@ -101,6 +118,10 @@ public class IssueMedi extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 790, 520));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

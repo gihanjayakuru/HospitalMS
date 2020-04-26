@@ -28,6 +28,9 @@ public class Appointment extends javax.swing.JPanel {
     
     public Appointment() {
         initComponents();
+        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField3.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField5.setBackground(new java.awt.Color(0,0,0,1));
         currentdate();
         appointment.fillappointmentTable(jTable1);
         
@@ -91,7 +94,9 @@ public class Appointment extends javax.swing.JPanel {
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         jTextField1.setText("type id");
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 90, -1));
+        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField1.setOpaque(false);
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 90, -1));
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Clinic 1");
@@ -177,7 +182,13 @@ public class Appointment extends javax.swing.JPanel {
             }
         });
         add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, -1, 30));
+
+        jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField3.setOpaque(false);
         add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 80, -1));
+
+        jTextField5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 204)));
+        jTextField5.setOpaque(false);
         add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 90, -1));
         add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
@@ -336,6 +347,9 @@ public class Appointment extends javax.swing.JPanel {
             }
         
         jTextField1.setText("");
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"P.ID","Clinic","Date","time"}));
+        //populate table
+        appointment.fillappointmentTable(jTable1);
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
