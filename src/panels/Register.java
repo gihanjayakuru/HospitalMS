@@ -5,6 +5,9 @@
  */
 package panels;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -159,6 +162,9 @@ public class Register extends javax.swing.JPanel {
         jTextField6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField6.setOpaque(false);
         jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField6KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField6KeyTyped(evt);
             }
@@ -316,14 +322,53 @@ public class Register extends javax.swing.JPanel {
 
     private void jTextField6KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyTyped
         // TODO add your handling code here:
-        String value1 =jTextField6.getText().toString();
-        
-    DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
-    TableRowSorter<DefaultTableModel> tro=new TableRowSorter<DefaultTableModel>(model);
-    jTable1.setRowSorter(tro);
-    tro.setRowFilter(RowFilter.regexFilter(value1));
+//        String value1 =jTextField6.getText().toString();
+//        
+//    DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
+//    TableRowSorter<DefaultTableModel> tro=new TableRowSorter<DefaultTableModel>(model);
+//    jTable1.setRowSorter(tro);
+//    tro.setRowFilter(RowFilter.regexFilter(value1));
     
     }//GEN-LAST:event_jTextField6KeyTyped
+
+    private void jTextField6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyReleased
+        // TODO add your handling code here:
+          try {
+            MYCONNECTION myconnection =new MYCONNECTION();
+            PreparedStatement st;
+            ResultSet rs;
+            String Query="SELECT * FROM `patientdetails` WHERE `id`=?";
+            
+            st=myconnection.createConnection().prepareStatement(Query);
+            
+            st.setString(1, jTextField6.getText());
+            
+            rs=st.executeQuery();
+            if(rs.next()){
+            
+                String a=rs.getString("id");
+                jTextField1.setText(a);
+                String b=rs.getString("p.name");
+                jTextField2.setText(b);
+                String c=rs.getString("g.name");
+                jTextField3.setText(c);
+                String d=rs.getString("g.id");
+                jTextField4.setText(d);
+                String e=rs.getString("g.contact");
+                jTextField5.setText(e);
+                String f=rs.getString("address");
+                jTextArea1.setText(f);
+            
+            }
+  
+        } catch (SQLException ex) {
+            
+            JOptionPane.showMessageDialog(null, ex);
+            
+        }
+        
+        
+    }//GEN-LAST:event_jTextField6KeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

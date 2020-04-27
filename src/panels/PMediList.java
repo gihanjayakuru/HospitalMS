@@ -24,7 +24,13 @@ public class PMediList extends javax.swing.JPanel {
     
     public PMediList() {
         initComponents();
+        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField7.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField8.setBackground(new java.awt.Color(0,0,0,1));
         currentdate();
+       
+        medilist.fillmediTable(jTable1);
     }
     public void currentdate(){
     
@@ -74,7 +80,13 @@ public class PMediList extends javax.swing.JPanel {
 
         jLabel1.setText("Medi Name:-");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField1.setOpaque(false);
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 130, -1));
+
+        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField2.setOpaque(false);
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 30, -1));
 
         jLabel3.setText("count");
@@ -136,10 +148,16 @@ public class PMediList extends javax.swing.JPanel {
 
         jLabel5.setText("date");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, 20));
+
+        jTextField7.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField7.setOpaque(false);
         jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 90, -1));
 
         jLabel6.setText("ID:-");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 20, -1));
+
+        jTextField8.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField8.setOpaque(false);
         jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 70, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Morning", "Noon", "Eveening", "Night", "when nec" }));
@@ -259,6 +277,10 @@ public class PMediList extends javax.swing.JPanel {
             {
                 JOptionPane.showMessageDialog(null, ex.getMessage()+"Enter ID", " ID ERROR", JOptionPane.ERROR_MESSAGE);
             }
+        
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"P.ID","mediname","daytime","count","be_af","date"}));
+        //populate table
+        medilist.fillmediTable(jTable1);
         
         jTextField8.setText("");
         jTextField1.setText("");

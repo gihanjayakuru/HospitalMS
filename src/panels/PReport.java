@@ -5,10 +5,17 @@
  */
 package panels;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -19,17 +26,20 @@ public class PReport extends javax.swing.JPanel {
     /**
      * Creates new form PReport
      */
+    MYCONNECTION myconnection =new MYCONNECTION();
+    PATEINTREGIS register = new PATEINTREGIS();
     REPORT report=new REPORT();
     
     public PReport() {
         initComponents();
-        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField6.setBackground(new java.awt.Color(0,0,0,1));
         jTextField2.setBackground(new java.awt.Color(0,0,0,1));
         jTextField3.setBackground(new java.awt.Color(0,0,0,1));
         jTextField4.setBackground(new java.awt.Color(0,0,0,1));
         jTextField5.setBackground(new java.awt.Color(0,0,0,1));
         currentdate();
         report.fillreporttable(jTable1);
+        register.fillregisterTable(jTable2);
     }
     public void currentdate(){
     
@@ -52,7 +62,6 @@ public class PReport extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -70,6 +79,9 @@ public class PReport extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jTextField6 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(781, 519));
@@ -79,10 +91,6 @@ public class PReport extends javax.swing.JPanel {
 
         jLabel1.setText("search Patient:-");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
-
-        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        jTextField1.setOpaque(false);
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 110, -1));
 
         jLabel2.setText("Patient ID:-");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 70, 20));
@@ -122,7 +130,7 @@ public class PReport extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 370, 200));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 370, 200));
 
         jButton1.setText("Save report");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -156,7 +164,7 @@ public class PReport extends javax.swing.JPanel {
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 70, -1));
 
         jLabel7.setText("patient medi report down here:-");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, -1, -1));
 
         jLabel8.setText("Patient name:-");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
@@ -164,6 +172,32 @@ public class PReport extends javax.swing.JPanel {
         jTextField5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField5.setOpaque(false);
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 90, -1));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "P.ID", "P.Name"
+            }
+        ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jTable2);
+
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 380, 90));
+
+        jTextField6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField6.setOpaque(false);
+        jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField6KeyReleased(evt);
+            }
+        });
+        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 110, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel5.setPreferredSize(new java.awt.Dimension(781, 519));
@@ -294,6 +328,63 @@ public class PReport extends javax.swing.JPanel {
         report.fillreporttable(jTable1);
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+        // TODO add your handling code here:
+        
+        DefaultTableModel  model = (DefaultTableModel)jTable2.getModel();
+
+        int rIndex = jTable2.getSelectedRow();//get the select row index
+
+        jTextField2.setText(model.getValueAt(rIndex,0).toString());
+        jTextField5.setText(model.getValueAt(rIndex,1).toString());
+        
+        
+       
+
+    }//GEN-LAST:event_jTable2MouseClicked
+
+    private void jTextField6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyReleased
+        // TODO add your handling code here:
+        
+//    String value1 =jTextField6.getText().toString();
+//        
+//    DefaultTableModel model=(DefaultTableModel)jTable2.getModel();
+//    TableRowSorter<DefaultTableModel> tro=new TableRowSorter<DefaultTableModel>(model);
+//    jTable2.setRowSorter(tro);
+//    tro.setRowFilter(RowFilter.regexFilter(value1));
+
+        
+        try {
+            
+            PreparedStatement st;
+            ResultSet rs;
+            String Query="SELECT * FROM `patientdetails` WHERE `id`=?";
+            
+            st=myconnection.createConnection().prepareStatement(Query);
+            
+            st.setString(1, jTextField6.getText());
+            
+            rs=st.executeQuery();
+            if(rs.next()){
+            
+                String a=rs.getString("id");
+                jTextField2.setText(a);
+                String b=rs.getString("p.name");
+                jTextField5.setText(b);
+            
+            }
+  
+        } catch (SQLException ex) {
+            
+            JOptionPane.showMessageDialog(null, ex);
+            
+        }
+    
+       
+        
+            
+    }//GEN-LAST:event_jTextField6KeyReleased
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -310,12 +401,14 @@ public class PReport extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
