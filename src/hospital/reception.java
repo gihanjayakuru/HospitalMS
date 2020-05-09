@@ -19,6 +19,7 @@ public class reception extends javax.swing.JFrame {
      */
     public reception() {
         initComponents();
+        new CombinePanel(panel1, new panels.Register());
         this.setLocationRelativeTo(this);
     }
 

@@ -92,17 +92,17 @@ public class PATIENTMEDI {
     {
         PreparedStatement st;
         ResultSet rs;
-        String editQuery="UPDATE `patient_medi_list` SET `medi_name`=?,`daytime`=?,`count`=?,`be_af`=?,`date`=? WHERE `id`=?";
+        String editQuery="UPDATE `patient_medi_list` SET `daytime`=?,`count`=?,`be_af`=?,`date`=? WHERE `medi_name`=?";
         
         try {
             st=myconnection.createConnection().prepareStatement(editQuery);
             
-            st.setString(1, mediname);
-            st.setString(2, daytime);
-            st.setInt(3, count);
-            st.setString(4, be_af);
-            st.setString(3, date);
-            st.setString(4, pid);
+            //st.setString(1, pid);
+            st.setString(1, daytime);
+            st.setInt(2, count);
+            st.setString(3, be_af);
+            st.setString(4, date);
+            st.setString(5, mediname);
             
             
             return (st.executeUpdate()>0); 
@@ -115,17 +115,17 @@ public class PATIENTMEDI {
     }
     
 
-    public boolean removemedilist(String pid)
+    public boolean removemedilist(String mediname)
     {
         PreparedStatement st;
         ResultSet rs;
-        String deleteQuery="DELETE FROM `patient_medi_list` WHERE `id`=?";
+        String deleteQuery="DELETE FROM `patient_medi_list` WHERE `medi_name`=?";
         
         try {
             st=myconnection.createConnection().prepareStatement(deleteQuery);
             
 
-            st.setString(1, pid);
+            st.setString(1, mediname);
             
             return (st.executeUpdate()>0); 
             

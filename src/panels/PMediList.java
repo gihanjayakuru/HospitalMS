@@ -185,6 +185,38 @@ public class PMediList extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        String pid=jTextField8.getText();
+        String be_af="";
+        String mediname=jTextField1.getText();
+        String date=jTextField7.getText();
+        int count= Integer.parseInt(jTextField2.getText().toString());
+        
+         String daytime=jComboBox1.getSelectedItem().toString();
+        
+        if(jRadioButton1.isSelected()){
+            be_af="before";
+        }else if(jRadioButton2.isSelected()){
+            be_af="after";
+        }
+        
+        if(pid.trim().equals("")|| be_af.trim().equals("") ||mediname.trim().equals("")|| date.trim().equals("")){
+        
+            JOptionPane.showMessageDialog(null, "empty fields!!","medi list", JOptionPane.ERROR_MESSAGE);
+        }
+        else{     
+             if(medilist.editmedilist(pid,mediname,daytime,count,be_af,date))// pass values to medi list class
+                 {
+                 JOptionPane.showMessageDialog(null, "medi list added Successfuly!!","medi list", JOptionPane.INFORMATION_MESSAGE);
+                 }
+             else{
+                 JOptionPane.showMessageDialog(null, "medi list added Failed!!","medi list", JOptionPane.ERROR_MESSAGE);
+             }
+        }
+        
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"P.ID","mediname","daytime","count","be_af","date"}));
+        //populate table
+        medilist.fillmediTable(jTable1);
+        
         
         
         
@@ -262,9 +294,9 @@ public class PMediList extends javax.swing.JPanel {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         try{
-           String pid= jTextField8.getText(); 
+           String mediname= jTextField1.getText(); 
                 
-            if(medilist.removemedilist(pid))// pass values to appointment class
+            if(medilist.removemedilist(mediname))// pass values to appointment class
                {
                 JOptionPane.showMessageDialog(null, " Deleted Successfuly!!","Remove EMPLOYEE", JOptionPane.INFORMATION_MESSAGE);
                }

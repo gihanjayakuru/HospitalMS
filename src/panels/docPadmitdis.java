@@ -22,13 +22,15 @@ public class docPadmitdis extends javax.swing.JPanel {
      * Creates new form docPadmitdis
      */
     
+    REPORT report=new REPORT(); 
     ADMIT admit=new ADMIT();
     
     public docPadmitdis() {
         initComponents();
         currentdate();
-        filter();
-        admit.fillreporttable(jTable1);
+        //filter();
+        //admit.fillreporttable(jTable1);
+        report.fillreporttable(jTable1);
         admit.filladmittable(jTable2);
         
     }
@@ -91,7 +93,7 @@ public class docPadmitdis extends javax.swing.JPanel {
 
             },
             new String [] {
-                "PID", "PName", "Diagnose", "last report date"
+                "PID", "PName", "Diagnose", "description", "last report date"
             }
         ));
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -101,7 +103,7 @@ public class docPadmitdis extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 50, 350, 160));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 50, 400, 160));
 
         jLabel1.setText("Patient ID:-");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));

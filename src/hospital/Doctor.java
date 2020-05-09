@@ -141,7 +141,8 @@ public class Doctor extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        new CombinePanel(jPanel4, new panels.docClinic());
+        //new CombinePanel(jPanel4, new panels.docClinic());
+        new CombinePanel(jPanel4, new panels.Appointment());//reception appointment clinic
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
