@@ -18,6 +18,7 @@ public class Doctor extends javax.swing.JFrame {
      */
     public Doctor() {
         initComponents();
+        new CombinePanel(jPanel4, new panels.PReport());
     }
 
     /**

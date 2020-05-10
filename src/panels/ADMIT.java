@@ -46,6 +46,7 @@ public class ADMIT {
                 row[1]= rs.getString(2);
                 row[2]= rs.getString(3);
                 row[3]=rs.getString(5);
+                
 
 
                 tablemodel.addRow(row);
@@ -76,12 +77,14 @@ public class ADMIT {
             
             while(rs.next())
             {
-                row = new Object[5];//column on table
-                row[0]=rs.getString(1);
+                row = new Object[6];//column on table
+                
+                row[0]= rs.getString(1);
                 row[1]= rs.getString(2);
                 row[2]= rs.getString(3);
-                row[3]=rs.getString(4);
+                row[3]= rs.getString(4);
                 row[4]= rs.getString(5);
+                row[5]= rs.getString(6);
 
                 tablemodel.addRow(row);
             }
@@ -94,11 +97,11 @@ public class ADMIT {
     
     //admit_patients
     
-    public boolean addadmit(String id, String name, String diagnose, String word, String admit_date){
+    public boolean addadmit(String id, String name, String diagnose, String word, String admit_date,String admdis){
         
         PreparedStatement st;
         ResultSet rs;
-        String addQuery="INSERT INTO `admit_patients`(`id`, `p.name`, `diagnose`, `word`, `admit_date`) VALUES (?,?,?,?,?)";
+        String addQuery="INSERT INTO `admit_patients`(`id`, `p.name`, `diagnose`, `word`, `admit_date`, `admdis`) VALUES (?,?,?,?,?,?)";
         
         try {
             st=myconnection.createConnection().prepareStatement(addQuery);
@@ -108,6 +111,33 @@ public class ADMIT {
             st.setString(3, diagnose);   
             st.setString(4, word);
             st.setString(5, admit_date);   
+            st.setString(6, admdis);
+            
+            if(st.executeUpdate()>0)
+            {
+             return true;   
+            }else{
+                return false;
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ADMIT.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+    
+    
+    public boolean editadmit(String id,String admdis){
+        
+        PreparedStatement st;
+        ResultSet rs;
+        String addQuery="UPDATE `admit_patients` SET `admdis`=? WHERE `id`=?";
+        
+        try {
+            st=myconnection.createConnection().prepareStatement(addQuery);
+            
+            st.setString(1, admdis);
+            st.setString(2, id);    
             
             
             if(st.executeUpdate()>0)
@@ -122,5 +152,7 @@ public class ADMIT {
             return false;
         }
     }
+    
+    
     
 }

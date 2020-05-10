@@ -116,12 +116,12 @@ public class docPadmitdis extends javax.swing.JPanel {
 
             },
             new String [] {
-                "PID", "PName", "Diagnose", "word", "date admit"
+                "PID", "PName", "Diagnose", "word", "date admit", "admit/discharge"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 410, 220));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 460, 220));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "word 1", "word 2", "word 3", "word 4" }));
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, -1, -1));
@@ -146,6 +146,11 @@ public class docPadmitdis extends javax.swing.JPanel {
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 120, -1));
 
         jButton2.setText("discharge");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
 
         jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -179,6 +184,7 @@ public class docPadmitdis extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
        // addadmit(id,name,diagnose,word,admit_date)
+        String admdis="Admit";
         String id = jTextField2.getText();
         String name= jTextField4.getText();
         String diagnose= jTextField3.getText();
@@ -191,7 +197,7 @@ public class docPadmitdis extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "empty fields!!","Appointment", JOptionPane.ERROR_MESSAGE);
         }
         else{     
-             if(admit.addadmit(id,name,diagnose,word,admit_date))// pass values to class
+             if(admit.addadmit(id,name,diagnose,word,admit_date,admdis))// pass values to class
                  {
                  JOptionPane.showMessageDialog(null, "added Successfuly!!","report", JOptionPane.INFORMATION_MESSAGE);
                  }
@@ -200,7 +206,7 @@ public class docPadmitdis extends javax.swing.JPanel {
              }
         }
         
-        jTable2.setModel(new DefaultTableModel(null,new Object[]{"P.ID","P.name","diagnose","word","admit date"}));
+        jTable2.setModel(new DefaultTableModel(null,new Object[]{"P.ID","P.name","diagnose","word","admit date","admit/discharge"}));
         //populate table
         admit.filladmittable(jTable2);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -222,6 +228,26 @@ public class docPadmitdis extends javax.swing.JPanel {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jTextField5KeyReleased
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String admdis="Discharge";
+        
+        String id=jTextField2.getText();
+        
+        if(admit.editadmit(id,admdis)){
+            JOptionPane.showMessageDialog(null, "Discharge Successfuly!!", "Admit", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Discharge Failed!!","Admit", JOptionPane.ERROR_MESSAGE);
+        
+        }
+        
+        jTable2.setModel(new DefaultTableModel(null,new Object[]{"P.ID","P.name","diagnose","word","admit date","admit/discharge"}));
+        //populate table
+        admit.filladmittable(jTable2);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
