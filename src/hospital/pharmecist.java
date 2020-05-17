@@ -18,6 +18,7 @@ public class pharmecist extends javax.swing.JFrame {
      */
     public pharmecist() {
         initComponents();
+        new CombinePanel(jPanel4, new panels.IssueMedi());
     }
 
     /**

@@ -71,6 +71,7 @@ public class PMediList extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox();
+        jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(781, 519));
@@ -128,7 +129,7 @@ public class PMediList extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
 
         jButton2.setText("edit");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +137,7 @@ public class PMediList extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, -1));
 
         jButton3.setText("remove");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +145,7 @@ public class PMediList extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, -1, -1));
 
         jLabel5.setText("date");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, 20));
@@ -161,7 +162,10 @@ public class PMediList extends javax.swing.JPanel {
         jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 70, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Morning", "Noon", "Eveening", "Night", "when nec" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 80, -1));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 80, -1));
+
+        jLabel7.setText("show patient medi history with another frame and table");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 320, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(781, 519));
@@ -204,7 +208,7 @@ public class PMediList extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "empty fields!!","medi list", JOptionPane.ERROR_MESSAGE);
         }
         else{     
-             if(medilist.editmedilist(pid,mediname,daytime,count,be_af,date))// pass values to medi list class
+             if(medilist.editmedilist(pid,mediname,daytime,count,be_af,date) && medilist.editmedilisthistory(pid,mediname,daytime,count,be_af,date))// pass values to medi list class
                  {
                  JOptionPane.showMessageDialog(null, "medi list added Successfuly!!","medi list", JOptionPane.INFORMATION_MESSAGE);
                  }
@@ -231,9 +235,20 @@ public class PMediList extends javax.swing.JPanel {
         String mediname=jTextField1.getText();
         String date=jTextField7.getText();
         int count= Integer.parseInt(jTextField2.getText().toString());
+        //String daytime="";
+        String daytime=jComboBox1.getSelectedItem().toString();
+         //String daytime= jCheckBox1.getText();
         
-         String daytime=jComboBox1.getSelectedItem().toString();
+//        if(jCheckBox1.isSelected())
+//        {
+//             daytime = "Morning";
+//        }
+//        else(jCheckBox1.isSelected())
+//        {
+//             daytime = "evening";
+//        }
         
+         
         if(jRadioButton1.isSelected()){
             be_af="before";
         }else if(jRadioButton2.isSelected()){
@@ -245,7 +260,7 @@ public class PMediList extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "empty fields!!","medi list", JOptionPane.ERROR_MESSAGE);
         }
         else{     
-             if(medilist.addmedi(pid,mediname,daytime,count, be_af, date))// pass values to medi list class
+             if(medilist.addmedi(pid,mediname,daytime,count, be_af, date) && medilist.addmedihistory(pid,mediname,daytime,count,be_af,date))// pass values to medi list class
                  {
                  JOptionPane.showMessageDialog(null, "medi list added Successfuly!!","medi list", JOptionPane.INFORMATION_MESSAGE);
                  }
@@ -296,7 +311,7 @@ public class PMediList extends javax.swing.JPanel {
         try{
            String mediname= jTextField1.getText(); 
                 
-            if(medilist.removemedilist(mediname))// pass values to appointment class
+            if(medilist.removemedilist(mediname) && medilist.removemedilisthistory(mediname))// pass values to appointment class
                {
                 JOptionPane.showMessageDialog(null, " Deleted Successfuly!!","Remove EMPLOYEE", JOptionPane.INFORMATION_MESSAGE);
                }
@@ -334,6 +349,7 @@ public class PMediList extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
