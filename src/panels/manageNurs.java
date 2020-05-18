@@ -17,16 +17,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author hasa
  */
-public class manageDoctors {
+public class manageNurs {
     
-    MYCONNECTION myconnection =new MYCONNECTION();
+     MYCONNECTION myconnection =new MYCONNECTION();
     
     
     public boolean addmanage(String id, String name, String position, String depart, String word){
         
         PreparedStatement st;
         ResultSet rs;
-        String addQuery="INSERT INTO `manage_doctors`(`id`, `name`, `department`, `word`,`position`) VALUES (?,?,?,?,?)";
+        String addQuery="INSERT INTO `manage_nurse`(`id`, `name`, `department`, `word`,`position`) VALUES (?,?,?,?,?)";
         
         try {
             st=myconnection.createConnection().prepareStatement(addQuery);
@@ -46,7 +46,7 @@ public class manageDoctors {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(manageDoctors.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(manageNurs.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -55,7 +55,7 @@ public class manageDoctors {
         
         PreparedStatement st;
         ResultSet rs;
-        String addQuery="UPDATE `manage_doctors` SET `name`=?,`department`=?,`word`=?,`position`=? WHERE `id`=?";
+        String addQuery="UPDATE `manage_nurse` SET `name`=?,`department`=?,`word`=?,`position`=? WHERE `id`=?";
         
         try {
             st=myconnection.createConnection().prepareStatement(addQuery);
@@ -75,7 +75,7 @@ public class manageDoctors {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(manageDoctors.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(manageNurs.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
@@ -84,7 +84,7 @@ public class manageDoctors {
         
         PreparedStatement st;
         ResultSet rs;
-        String addQuery="DELETE FROM `manage_doctors` WHERE `id`=?";
+        String addQuery="DELETE FROM `manage_nurse` WHERE `id`=?";
         
         try {
             st=myconnection.createConnection().prepareStatement(addQuery);
@@ -101,18 +101,18 @@ public class manageDoctors {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(manageDoctors.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(manageNurs.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
  
      }
      
        //function to populate table with database data
-    public void fillmngDocTable(JTable table)
+    public void fillmngnurseTable(JTable table)
     {
         PreparedStatement ps;
         ResultSet rs;
-        String selectQuery = "SELECT * FROM `manage_doctors`";
+        String selectQuery = "SELECT * FROM `manage_nurse`";
         
         try {
             
@@ -138,15 +138,11 @@ public class manageDoctors {
             }
         
         } catch (SQLException ex) {
-            Logger.getLogger(manageDoctors.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(manageNurs.class.getName()).log(Level.SEVERE, null, ex);
         }
     
     }
-     
+    
+    
+    
 }
-
-
-    //
-
-     
-

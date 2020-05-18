@@ -5,6 +5,9 @@
  */
 package panels;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author hasa
@@ -14,10 +17,17 @@ public class managenurse extends javax.swing.JPanel {
     /**
      * Creates new form managenurse
      */
+    
+    manageNurs mngnurse = new manageNurs();
+    EMPLOYEE employee=new EMPLOYEE();
+    
     public managenurse() {
         initComponents();
         jTextField1.setBackground(new java.awt.Color(0,0,0,1));
         jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        
+        employee.fillemployeeTable(jTable1);
+        mngnurse.fillmngnurseTable(jTable2);
         
     }
 
@@ -30,6 +40,7 @@ public class managenurse extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jComboBox3 = new javax.swing.JComboBox();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -48,42 +59,41 @@ public class managenurse extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "HEAD", "SINIOR", "JUNIOR" }));
-        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 130, -1));
+        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 130, -1));
 
-        jLabel6.setText("chose position:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+        jLabel6.setText("word position:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, 20));
 
         jLabel1.setText("nurse  id:-");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 88, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 88, -1, -1));
 
         jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField1.setOpaque(false);
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 100, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 100, -1));
 
         jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField2.setOpaque(false);
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 160, -1));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 160, -1));
 
         jLabel2.setText("nurse name:-");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 120, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 120, -1, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "OPD", "IPD" }));
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 150, -1));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 150, -1));
 
         jLabel4.setText("department");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
         jLabel3.setText("word:-");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "word 1", "word 2", "word 3", "word 4" }));
-        add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 100, -1));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 100, -1));
 
         jButton1.setText("ADD");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -91,63 +101,207 @@ public class managenurse extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, -1, -1));
 
         jButton2.setText("EDIT");
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
 
         jButton3.setText("REMOVE");
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "id", "name", "position"
+                "id", "name", "position", "gender"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 48, 350, 170));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 48, 350, 170));
 
         jLabel5.setText("employee list :nurs  list filtered");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "id", "name", "depart", "word"
+                "id", "name", "depart", "word", "position"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 350, 210));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 350, 210));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel7.setPreferredSize(new java.awt.Dimension(781, 519));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 540));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 530, Short.MAX_VALUE)
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 530));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        String id =jTextField1.getText();
+        String name = jTextField2.getText();
+        String depart = jComboBox1.getSelectedItem().toString();
+        String word = jComboBox2.getSelectedItem().toString();
+        String position = jComboBox3.getSelectedItem().toString();
+        
+        if(id.trim().equals("") || name.trim().equals("") )
+        {
+            JOptionPane.showMessageDialog(null, "Empty Fields", "please fill the form", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+           if(mngnurse.addmanage(id,name,depart,word,position))
+            {
+            JOptionPane.showMessageDialog(null, "Manage Nurse successfuly!!", "Manage Nurse", JOptionPane.INFORMATION_MESSAGE);
+            }
+        else{
+             JOptionPane.showMessageDialog(null, "Manage Nurse Failed!!", "Manage Nurse", JOptionPane.ERROR_MESSAGE);
+            }        
+        }
+        jTable2.setModel(new DefaultTableModel(null,new Object[]{"ID","name","department","word","position"}));
+        //populate table
+        mngnurse.fillmngnurseTable(jTable2);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String id =jTextField1.getText();
+        String name = jTextField2.getText();
+        String depart = jComboBox1.getSelectedItem().toString();
+        String word = jComboBox2.getSelectedItem().toString();
+        String position = jComboBox3.getSelectedItem().toString();
+        
+        if(id.trim().equals("") || name.trim().equals("") )
+        {
+            JOptionPane.showMessageDialog(null, "Empty Fields", "please fill the form", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+           if(mngnurse.editmanage(id,name,depart,word,position))
+            {
+            JOptionPane.showMessageDialog(null, "Manage Nurse edit successfuly!!", "Manage Nurse", JOptionPane.INFORMATION_MESSAGE);
+            }
+        else{
+             JOptionPane.showMessageDialog(null, "Manage Nurse edit Failed!!", "Manage Nurse", JOptionPane.ERROR_MESSAGE);
+            }        
+        }
+        jTable2.setModel(new DefaultTableModel(null,new Object[]{"ID","name","department","word","position"}));
+        //populate table
+        mngnurse.fillmngnurseTable(jTable2);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        String id =jTextField1.getText();
+        
+        
+        if(id.trim().equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "Empty Fields", "please fill the form", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+           if(mngnurse.removemanage(id))
+            {
+            JOptionPane.showMessageDialog(null, "remove successfuly!!", "Manage Nurse", JOptionPane.INFORMATION_MESSAGE);
+            }
+        else{
+             JOptionPane.showMessageDialog(null, "remove Failed!!", "Manage Nurse", JOptionPane.ERROR_MESSAGE);
+            }        
+        }
+        jTable2.setModel(new DefaultTableModel(null,new Object[]{"ID","name","department","word","position"}));
+        //populate table
+        mngnurse.fillmngnurseTable(jTable2);
+        
+        
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel  model = (DefaultTableModel)jTable1.getModel();
+        
+        int rIndex = jTable1.getSelectedRow();//get the select row index
+        
+        jTextField1.setText(model.getValueAt(rIndex,0).toString());
+        jTextField2.setText(model.getValueAt(rIndex,1).toString());
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+        // TODO add your handling code here:
+        
+        DefaultTableModel  model = (DefaultTableModel)jTable2.getModel();
+        
+        int rIndex = jTable2.getSelectedRow();//get the select row index
+        
+        jTextField1.setText(model.getValueAt(rIndex,0).toString());
+        jTextField2.setText(model.getValueAt(rIndex,1).toString());
+        
+        String depart=model.getValueAt(rIndex, 2).toString();
+        for(int i=0; i<jComboBox1.getItemCount(); i++)
+        {
+            if(jComboBox1.getItemAt(i).toString().equalsIgnoreCase(depart))
+            {
+                jComboBox1.setSelectedIndex(i);
+            }
+        }
+        
+        String word=model.getValueAt(rIndex, 3).toString();
+        for(int i=0; i<jComboBox2.getItemCount(); i++)
+        {
+            if(jComboBox2.getItemAt(i).toString().equalsIgnoreCase(word))
+            {
+                jComboBox2.setSelectedIndex(i);
+            }
+        }
+        
+        String position=model.getValueAt(rIndex, 4).toString();
+        for(int i=0; i<jComboBox3.getItemCount(); i++)
+        {
+            if(jComboBox3.getItemAt(i).toString().equalsIgnoreCase(position))
+            {
+                jComboBox3.setSelectedIndex(i);
+            }
+        }
+        
+    }//GEN-LAST:event_jTable2MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
