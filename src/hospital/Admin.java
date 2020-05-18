@@ -18,6 +18,7 @@ public class Admin extends javax.swing.JFrame {
      */
     public Admin() {
         initComponents();
+        new CombinePanel(jPanel4, new panels.addEmployee());
     }
 
     /**
@@ -87,6 +88,11 @@ public class Admin extends javax.swing.JFrame {
 
         jButton3.setText("Manage Nurse");
         jButton3.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, -1, -1));
 
         jButton4.setText("Staff Status");
@@ -150,6 +156,11 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         new CombinePanel(jPanel4, new panels.staffstatus());
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        new CombinePanel(jPanel4, new panels.managenurse());
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

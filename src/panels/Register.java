@@ -208,10 +208,10 @@ public class Register extends javax.swing.JPanel {
             
            if(register.addregister(id,pname,gname,gid,contact,address))
             {
-            JOptionPane.showMessageDialog(null, "New Patient added successfuly!!", "ADD FOOD", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "New Patient added successfuly!!", "ADD patient", JOptionPane.INFORMATION_MESSAGE);
             }
         else{
-             JOptionPane.showMessageDialog(null, "New Patient Added Failed!!", "ADD FOOD", JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(null, "New Patient Added Failed!!", "ADD patient", JOptionPane.ERROR_MESSAGE);
             }        
         }
         jTextField1.setText("");
@@ -246,16 +246,16 @@ public class Register extends javax.swing.JPanel {
     
             if(register.editregister(pid,pname,gname,gid,gcontact,address))// pass values to employee
                {
-                JOptionPane.showMessageDialog(null, "Employee Updated Successfuly!!","EDIT EMPLOYEE", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "register Updated Successfuly!!","EDIT register", JOptionPane.INFORMATION_MESSAGE);
                }
             else{
-                JOptionPane.showMessageDialog(null, "Employee Updated Failed!!","EDIT EMPLOYEE", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "register Updated Failed!!","EDIT register", JOptionPane.ERROR_MESSAGE);
                 }  
             
             }
             catch(NumberFormatException ex)
             {
-                JOptionPane.showMessageDialog(null, ex.getMessage()+"Enter Employee ID", "EMPLOYEE ID ERROR", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, ex.getMessage()+"check fields", " ID ERROR", JOptionPane.ERROR_MESSAGE);
             }
         }
         jTextField1.setText("");
@@ -279,16 +279,16 @@ public class Register extends javax.swing.JPanel {
                 
             if(register.removeregister(pid))// pass values to employee.java
                {
-                JOptionPane.showMessageDialog(null, "Employee Deleted Successfuly!!","Remove EMPLOYEE", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "patient Deleted Successfuly!!","Remove patient", JOptionPane.INFORMATION_MESSAGE);
                }
             else{
-                JOptionPane.showMessageDialog(null, "Employee Data Delete Failed!!","Remove Employee Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "patient Data Delete Failed!!","Remove patient Error", JOptionPane.ERROR_MESSAGE);
                 }  
             
             }
             catch(NumberFormatException ex)
             {
-                JOptionPane.showMessageDialog(null, ex.getMessage()+"Enter Employee ID", "EMPLOYEE ID ERROR", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, ex.getMessage()+"Echeck fields ", "patient ID ERROR", JOptionPane.ERROR_MESSAGE);
             }
         jTextField1.setText("");
         jTextField2.setText("");

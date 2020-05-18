@@ -5,6 +5,9 @@
  */
 package panels;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author hasa
@@ -14,8 +17,15 @@ public class addEmployee extends javax.swing.JPanel {
     /**
      * Creates new form addEmployee
      */
+    
+    EMPLOYEE employee=new EMPLOYEE();
+    
     public addEmployee() {
         initComponents();
+        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        
+        employee.fillemployeeTable(jTable1);
     }
 
     /**
@@ -27,6 +37,7 @@ public class addEmployee extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -36,6 +47,12 @@ public class addEmployee extends javax.swing.JPanel {
         jComboBox1 = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(781, 519));
@@ -44,34 +61,80 @@ public class addEmployee extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Emp ID");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jLabel2.setText("Emp Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         jLabel3.setText("chose poition:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, 20));
 
-        jTextField1.setText("jTextField1");
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 70, -1));
+        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField1.setOpaque(false);
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 110, -1));
 
-        jTextField2.setText("jTextField2");
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 60, -1));
+        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField2.setOpaque(false);
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 120, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "DOCTOR", "NURS", "PHAMERCIST", "STOCKMANAGER" }));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "id", "name", "position"
+                "id", "name", "position", "gender"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, -1, 270));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 60, 430, 270));
+
+        jButton1.setText("ADD");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+
+        jButton2.setText("EDIT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, -1));
+
+        jButton3.setText("REMOVE");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, -1, -1));
+
+        jLabel8.setText("Gender");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+
+        jRadioButton1.setBackground(new java.awt.Color(255, 102, 0));
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setText("Male");
+        jRadioButton1.setOpaque(false);
+        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
+
+        jRadioButton2.setBackground(new java.awt.Color(255, 102, 0));
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("Female");
+        jRadioButton2.setOpaque(false);
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel4.setPreferredSize(new java.awt.Dimension(781, 519));
@@ -93,14 +156,123 @@ public class addEmployee extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:    
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        //
+        
+        String id = jTextField1.getText();
+        String name = jTextField2.getText();
+        String position = jComboBox1.getSelectedItem().toString();
+        String gender = "";
+        
+        
+        if(jRadioButton1.isSelected()){
+            gender="Male";
+        }else if(jRadioButton2.isSelected()){
+            gender="Female";
+        }
+        
+        if(id.trim().equals("") || name.trim().equals("") )
+        {
+            JOptionPane.showMessageDialog(null, "Empty Fields", "please fill the form", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+           if(employee.addemployee(id,name,position,gender))
+            {
+            JOptionPane.showMessageDialog(null, "New Employee added successfuly!!", "ADD employee", JOptionPane.INFORMATION_MESSAGE);
+            }
+        else{
+             JOptionPane.showMessageDialog(null, "New Employee Added Failed!!", "ADD employee", JOptionPane.ERROR_MESSAGE);
+            }        
+        }
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"ID","name","position","gender"}));
+        //populate table
+        employee.fillemployeeTable(jTable1);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        //
+        
+        String id = jTextField1.getText();
+        String name = jTextField2.getText();
+        String position = jComboBox1.getSelectedItem().toString();
+        String gender = "";
+        
+        
+        if(jRadioButton1.isSelected()){
+            gender="before";
+        }else if(jRadioButton2.isSelected()){
+            gender="after";
+        }
+        
+        if(id.trim().equals("") || name.trim().equals("") )
+        {
+            JOptionPane.showMessageDialog(null, "Empty Fields", "please fill the form", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+           if(employee.editemployee(id,name,position,gender))
+            {
+            JOptionPane.showMessageDialog(null, "Employee edit successfuly!!", "edit employee", JOptionPane.INFORMATION_MESSAGE);
+            }
+        else{
+             JOptionPane.showMessageDialog(null, "Employee edit Failed!!", "edit employee", JOptionPane.ERROR_MESSAGE);
+            }        
+        }
+        
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"ID","name","position","gender"}));
+        //populate table
+        employee.fillemployeeTable(jTable1);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        //
+        String id = jTextField1.getText();
+ 
+        
+        if(id.trim().equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "Empty Field", "please enter id", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+           if(employee.removeemployee(id))
+            {
+            JOptionPane.showMessageDialog(null, "Employee remove successfuly!!", "remove employee", JOptionPane.INFORMATION_MESSAGE);
+            }
+        else{
+             JOptionPane.showMessageDialog(null, "Employee remove Failed!!", "remove employee", JOptionPane.ERROR_MESSAGE);
+            }        
+        }
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"ID","name","position","gender"}));
+        //populate table
+        employee.fillemployeeTable(jTable1);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
