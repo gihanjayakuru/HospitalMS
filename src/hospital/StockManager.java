@@ -18,6 +18,7 @@ public class StockManager extends javax.swing.JFrame {
      */
     public StockManager() {
         initComponents();
+        new CombinePanel(jPanel4, new panels.addmedilist());
     }
 
     /**
@@ -36,11 +37,11 @@ public class StockManager extends javax.swing.JFrame {
         sidepnl = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(980, 610));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(980, 610));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,14 +67,14 @@ public class StockManager extends javax.swing.JFrame {
         sidepnl.setPreferredSize(new java.awt.Dimension(200, 560));
         sidepnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setText("show request stock");
+        jButton3.setText("ADD Medi");
         jButton3.setPreferredSize(new java.awt.Dimension(200, 59));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 138, -1, -1));
+        sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, -1, -1));
 
         jButton4.setText("stock");
         jButton4.setPreferredSize(new java.awt.Dimension(200, 59));
@@ -82,7 +83,16 @@ public class StockManager extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 213, -1, -1));
+        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
+
+        jButton5.setText("show request stock");
+        jButton5.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        sidepnl.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(200, 560));
@@ -124,13 +134,18 @@ public class StockManager extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        new CombinePanel(jPanel4, new panels.RequestMedi());
+        new CombinePanel(jPanel4, new panels.addmedilist());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         new CombinePanel(jPanel4, new panels.stock());
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        new CombinePanel(jPanel4, new panels.requestmedistock());
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,6 +186,7 @@ public class StockManager extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
