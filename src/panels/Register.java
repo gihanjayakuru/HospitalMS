@@ -69,6 +69,9 @@ public class Register extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(780, 540));
+
+        jPanel1.setPreferredSize(new java.awt.Dimension(780, 540));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -174,8 +177,9 @@ public class Register extends javax.swing.JPanel {
         jLabel9.setText("OPD Register Patients");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 170, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 781, 519));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/Beautiful Backgrounds-036.png"))); // NOI18N
+        jLabel2.setPreferredSize(new java.awt.Dimension(780, 540));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 781, 540));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

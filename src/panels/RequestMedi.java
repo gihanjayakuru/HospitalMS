@@ -5,6 +5,10 @@
  */
 package panels;
 
+import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author hasa
@@ -12,10 +16,15 @@ package panels;
 public class RequestMedi extends javax.swing.JPanel {
 
     /**
-     * Creates new form RequestMedi
+     * Creates new form RequestMedi pharmecist
      */
+    ADDMEDI medi=new ADDMEDI();
+    REQSTOCK request= new REQSTOCK();
+    
     public RequestMedi() {
         initComponents();
+        medi.fillmediTable(jTable3);
+        request.fillreqstockTable(jTable2);
     }
 
     /**
@@ -48,7 +57,6 @@ public class RequestMedi extends javax.swing.JPanel {
         jTextField5 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -98,12 +106,17 @@ public class RequestMedi extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Medi Id", "Name", "req type", "numer of"
+                "Medi Id", "Name", "form", "strength", "number of pack"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 400, 250));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 440, 250));
 
         jButton2.setText("add to list");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -132,6 +145,11 @@ public class RequestMedi extends javax.swing.JPanel {
                 "Medi ID", "Medi Name", "Form", "Strength"
             }
         ));
+        jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable3MouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(jTable3);
 
         jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 440, 210));
@@ -143,16 +161,13 @@ public class RequestMedi extends javax.swing.JPanel {
         jTextField5.setOpaque(false);
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 90, -1));
 
-        jLabel7.setText("Req type :");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 60, -1));
+        jLabel7.setText("Req type : package");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 160, 20));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Liquid", "Tablet", "Capsules", "Drops", "Inhalers", "Injections" }));
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 100, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "pack", "unit" }));
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 70, -1));
-
-        jLabel8.setText("Number of pack/unit :-");
+        jLabel8.setText("Number of pack :-");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 294, 120, 20));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
@@ -177,6 +192,37 @@ public class RequestMedi extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
+        String medi_id=  jTextField2.getText();
+        String medi_name= jTextField3.getText();
+        String form = jComboBox1.getSelectedItem().toString();       
+        String strength = jTextField1.getText();
+        
+        int num_pack= Integer.parseInt(jTextField5.getText());
+
+        
+        if(medi_id.trim().equals("") || medi_name.trim().equals("") || form.trim().equals("") || strength.trim().equals("") )
+        {
+            JOptionPane.showMessageDialog(null, "Empty Fields", "please check field", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+           if(request.addreqstock(medi_id,medi_name,form,strength,num_pack))
+            {
+            JOptionPane.showMessageDialog(null, "Stock added successfuly!!", "Stock", JOptionPane.INFORMATION_MESSAGE);
+            }
+        else{
+             JOptionPane.showMessageDialog(null, "Stock added Failed!!", "Stock", JOptionPane.ERROR_MESSAGE);
+            }        
+        }
+        jTable2.setModel(new DefaultTableModel(null,new Object[]{"medi id", "medi name", "form", "strength", "number of package"}));
+        //populate table
+        request.fillreqstockTable(jTable2);
+        
+        
+        
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -187,6 +233,35 @@ public class RequestMedi extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel  model = (DefaultTableModel)jTable3.getModel();
+        
+        int rIndex = jTable3.getSelectedRow();//get the select row index
+        
+        jTextField2.setText(model.getValueAt(rIndex,0).toString());
+        jTextField3.setText(model.getValueAt(rIndex,1).toString());
+        
+        String form=model.getValueAt(rIndex, 2).toString();
+        for(int i=0; i<jComboBox1.getItemCount(); i++)
+        {
+            if(jComboBox1.getItemAt(i).toString().equalsIgnoreCase(form))
+            {
+                jComboBox1.setSelectedIndex(i);
+            }
+        }
+        
+        jTextField1.setText(model.getValueAt(rIndex,3).toString());
+        
+        
+        
+    }//GEN-LAST:event_jTable3MouseClicked
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTable2MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -194,7 +269,6 @@ public class RequestMedi extends javax.swing.JPanel {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

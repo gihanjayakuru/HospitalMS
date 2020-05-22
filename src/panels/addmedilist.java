@@ -5,6 +5,9 @@
  */
 package panels;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author hasa
@@ -14,8 +17,15 @@ public class addmedilist extends javax.swing.JPanel {
     /**
      * Creates new form addmedilist
      */
+    ADDMEDI medi=new ADDMEDI();
+    
     public addmedilist() {
         initComponents();
+        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField4.setBackground(new java.awt.Color(0,0,0,1));
+        medi.fillmediTable(jTable1);
+        
     }
 
     /**
@@ -70,17 +80,37 @@ public class addmedilist extends javax.swing.JPanel {
                 "Medi ID", "Name", "Form", "Strength"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(292, 30, 410, 270));
 
         jButton1.setText("ADD");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, 30));
 
         jButton2.setText("EDIT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, -1, 30));
 
         jButton3.setText("REMOVE");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, -1, 30));
 
         jLabel3.setText("Form :");
@@ -115,6 +145,112 @@ public class addmedilist extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String medi_id=  jTextField1.getText();
+        String medi_name= jTextField2.getText();
+        String form = jComboBox1.getSelectedItem().toString();       
+        String strength = jTextField4.getText();
+        
+        if(medi_id.trim().equals("") || medi_name.trim().equals("") || form.trim().equals("") || strength.trim().equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "ERROR", "Please check the empty fields", JOptionPane.ERROR_MESSAGE);
+        
+        }
+        else
+        {
+            if(medi.addmedi(medi_id,medi_name,form,strength))// pass values to medi list class
+                 {
+                 JOptionPane.showMessageDialog(null, "medi added Successfuly!!","medi list", JOptionPane.INFORMATION_MESSAGE);
+                 }
+             else{
+                 JOptionPane.showMessageDialog(null, "medi added Failed!!","medi list", JOptionPane.ERROR_MESSAGE);
+             }
+        }
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"medi_id","medi_name","form","strength"}));
+        //populate table
+        medi.fillmediTable(jTable1);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String medi_id=  jTextField1.getText();
+        String medi_name= jTextField2.getText();
+        String form = jComboBox1.getSelectedItem().toString();       
+        String strength = jTextField4.getText();
+        
+        if(medi_id.trim().equals("") || medi_name.trim().equals("") || form.trim().equals("") || strength.trim().equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "ERROR", "Please check the empty fields", JOptionPane.ERROR_MESSAGE);
+        
+        }
+        else
+        {
+            if(medi.editmedi(medi_id,medi_name,form,strength))// pass values to medi list class
+                 {
+                 JOptionPane.showMessageDialog(null, "medi edit Successfuly!!","medi list", JOptionPane.INFORMATION_MESSAGE);
+                 }
+             else{
+                 JOptionPane.showMessageDialog(null, "medi edit Failed!!","medi list", JOptionPane.ERROR_MESSAGE);
+             }
+        }
+        
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"medi_id","medi_name","form","strength"}));
+        //populate table
+        medi.fillmediTable(jTable1);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        String medi_id=  jTextField1.getText();
+        
+        
+        if(medi_id.trim().equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "ERROR", "Please check the empty fields", JOptionPane.ERROR_MESSAGE);
+        
+        }
+        else
+        {
+            if(medi.removemedi(medi_id))// pass values to medi list class
+                 {
+                 JOptionPane.showMessageDialog(null, "medi remove Successfuly!!","medi list", JOptionPane.INFORMATION_MESSAGE);
+                 }
+             else{
+                 JOptionPane.showMessageDialog(null, "medi remove Failed!!","medi list", JOptionPane.ERROR_MESSAGE);
+             }
+        }
+        
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"medi_id","medi_name","form","strength"}));
+        //populate table
+        medi.fillmediTable(jTable1);
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel  model = (DefaultTableModel)jTable1.getModel();
+        
+        int rIndex = jTable1.getSelectedRow();//get the select row index
+        
+        jTextField1.setText(model.getValueAt(rIndex,0).toString());
+        jTextField2.setText(model.getValueAt(rIndex,1).toString());
+        
+        String form=model.getValueAt(rIndex, 2).toString();
+        for(int i=0; i<jComboBox1.getItemCount(); i++)
+        {
+            if(jComboBox1.getItemAt(i).toString().equalsIgnoreCase(form))
+            {
+                jComboBox1.setSelectedIndex(i);
+            }
+        }
+        
+        jTextField4.setText(model.getValueAt(rIndex,3).toString());
+        
+    }//GEN-LAST:event_jTable1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -69,11 +69,12 @@ public class reception extends javax.swing.JFrame {
         sidepnl.setPreferredSize(new java.awt.Dimension(200, 560));
         sidepnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/buttonregister.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/reception btn normal.png"))); // NOI18N
         jButton2.setBorder(null);
         jButton2.setContentAreaFilled(false);
-        jButton2.setPreferredSize(new java.awt.Dimension(200, 59));
-        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/buttonregisterbb.png"))); // NOI18N
+        jButton2.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/reception btn click.png"))); // NOI18N
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/reception btn hover.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -81,10 +82,11 @@ public class reception extends javax.swing.JFrame {
         });
         sidepnl.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, -1, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/doctors status button2.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/doctor status btn normal.png"))); // NOI18N
         jButton3.setBorder(null);
         jButton3.setContentAreaFilled(false);
-        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/doctors status button1.png"))); // NOI18N
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/doctor status btn hover.png"))); // NOI18N
+        jButton3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/doctor status btn click.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -92,11 +94,12 @@ public class reception extends javax.swing.JFrame {
         });
         sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 200, 60));
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/appointmentbutton.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/Appointment btn normal.png"))); // NOI18N
         jButton4.setToolTipText("");
         jButton4.setBorder(null);
         jButton4.setContentAreaFilled(false);
-        jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/appointmentbutton1.png"))); // NOI18N
+        jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/Appointment btn hover.png"))); // NOI18N
+        jButton4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/Appointment btn click.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -125,6 +128,7 @@ public class reception extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

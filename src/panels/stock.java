@@ -5,6 +5,16 @@
  */
 package panels;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author hasa
@@ -14,8 +24,33 @@ public class stock extends javax.swing.JPanel {
     /**
      * Creates new form stock
      */
+    ADDMEDI medi=new ADDMEDI();
+    SSTOCK stock=new SSTOCK();
+    
     public stock() {
         initComponents();
+        medi.fillmediTable(jTable2);
+        stock.fillstockTable(jTable1);
+        currentdate();
+        
+        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField4.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField5.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField6.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField7.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField8.setBackground(new java.awt.Color(0,0,0,1));
+        
+    }
+    
+    public void currentdate(){
+    
+    Calendar cal =new GregorianCalendar();
+    int month=cal.get(Calendar.MONTH);
+    int year =cal.get(Calendar.YEAR);
+    int day= cal.get(Calendar.DAY_OF_MONTH);
+    jTextField5.setText(year+"/"+(month+1)+"/"+day);
+    jTextField5.setEditable(false);
     }
 
     /**
@@ -52,8 +87,8 @@ public class stock extends javax.swing.JPanel {
         jTable2 = new javax.swing.JTable();
         jLabel10 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jTextField9 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel8 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(781, 519));
@@ -113,14 +148,29 @@ public class stock extends javax.swing.JPanel {
                 "medi id", "medi name", "form", "strength", "package", "unit", "total", "pack ExpDate", "stored date"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 250, 480, 260));
 
         jButton1.setText("ADD");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, -1, -1));
 
         jButton2.setText("EDIT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
 
         jButton3.setText("REMOVE");
@@ -131,7 +181,7 @@ public class stock extends javax.swing.JPanel {
 
         jTextField8.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField8.setOpaque(false);
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 110, -1));
+        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 110, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -141,20 +191,22 @@ public class stock extends javax.swing.JPanel {
                 "Medi ID", "Medi Name", "Form", "Strength"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 440, 210));
 
-        jLabel10.setText("unit in package :-");
+        jLabel10.setText("unit in the package :-");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 100, 20));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 280, 10));
 
-        jTextField9.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        jTextField9.setOpaque(false);
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 110, -1));
-
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Liquid", "Tablet", "Capsules", "Drops", "Inhalers", "Injections" }));
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 100, -1));
+        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 120, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel8.setPreferredSize(new java.awt.Dimension(781, 521));
@@ -172,12 +224,155 @@ public class stock extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String medi_id=  jTextField1.getText();
+        String medi_name= jTextField2.getText();
+        String form = jComboBox1.getSelectedItem().toString();       
+        String strength = jTextField4.getText();
+        
+        int pack= Integer.parseInt(jTextField6.getText());
+        int unit = Integer.parseInt(jTextField7.getText());
+        
+        SimpleDateFormat dFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String Exp_date = dFormat.format(jDateChooser1.getDate());
+        
+        int total= Integer.parseInt(jTextField8.getText());
+        
+        String st_date = jTextField5.getText();
+        
+        if(medi_id.trim().equals("") || medi_name.trim().equals("") || form.trim().equals("") || strength.trim().equals("") )
+        {
+            JOptionPane.showMessageDialog(null, "Empty Fields", "please fill the form", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+           if(stock.addstock(medi_id,medi_name,form,strength,pack,unit,Exp_date,total,st_date))
+            {
+            JOptionPane.showMessageDialog(null, "Stock added successfuly!!", "Stock", JOptionPane.INFORMATION_MESSAGE);
+            }
+        else{
+             JOptionPane.showMessageDialog(null, "Stock added Failed!!", "Stock", JOptionPane.ERROR_MESSAGE);
+            }        
+        }
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"medi id", "medi name", "form", "strength", "package", "unit", "total", "pack ExpDate", "stored date"}));
+        //populate table
+        stock.fillstockTable(jTable1);
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel  model = (DefaultTableModel)jTable2.getModel();
+        
+        int rIndex = jTable2.getSelectedRow();//get the select row index
+        
+        jTextField1.setText(model.getValueAt(rIndex,0).toString());
+        jTextField2.setText(model.getValueAt(rIndex,1).toString());
+        
+        String form=model.getValueAt(rIndex, 2).toString();
+        for(int i=0; i<jComboBox1.getItemCount(); i++)
+        {
+            if(jComboBox1.getItemAt(i).toString().equalsIgnoreCase(form))
+            {
+                jComboBox1.setSelectedIndex(i);
+            }
+        }
+        
+        jTextField4.setText(model.getValueAt(rIndex,3).toString());
+        
+        jTextField6.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+        
+        
+    }//GEN-LAST:event_jTable2MouseClicked
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel  model = (DefaultTableModel)jTable1.getModel();
+        
+        int rIndex = jTable1.getSelectedRow();//get the select row index
+        
+        jTextField1.setText(model.getValueAt(rIndex,0).toString());
+        jTextField2.setText(model.getValueAt(rIndex,1).toString());
+        
+        String form=model.getValueAt(rIndex, 2).toString();
+        for(int i=0; i<jComboBox1.getItemCount(); i++)
+        {
+            if(jComboBox1.getItemAt(i).toString().equalsIgnoreCase(form))
+            {
+                jComboBox1.setSelectedIndex(i);
+            }
+        }
+        
+        jTextField4.setText(model.getValueAt(rIndex,3).toString());
+        
+        jTextField6.setText(model.getValueAt(rIndex,4).toString());
+        jTextField7.setText(model.getValueAt(rIndex,5).toString());
+        jTextField8.setText(model.getValueAt(rIndex,6).toString());
+        
+        try {
+            int selectedrow = jTable1.getSelectedRow();
+            Date date = new SimpleDateFormat("yyyy-MM-dd").parse((String)model.getValueAt(selectedrow, 7).toString());
+           
+               jDateChooser1.setDate(date);
+        
+        } catch (ParseException ex) {
+            Logger.getLogger(Appointment.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        String medi_id=  jTextField1.getText();
+        String medi_name= jTextField2.getText();
+        String form = jComboBox1.getSelectedItem().toString();       
+        String strength = jTextField4.getText();
+        
+        int pack= Integer.parseInt(jTextField6.getText());
+        int unit = Integer.parseInt(jTextField7.getText());
+        
+        SimpleDateFormat dFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String Exp_date = dFormat.format(jDateChooser1.getDate());
+        
+        int total= Integer.parseInt(jTextField8.getText());
+        
+        String st_date = jTextField5.getText();
+        
+        if(medi_id.trim().equals("") || medi_name.trim().equals("") || form.trim().equals("") || strength.trim().equals("") )
+        {
+            JOptionPane.showMessageDialog(null, "Empty Fields", "please fill the form", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+           if(stock.editstock(medi_id,medi_name,form,strength,pack,unit,Exp_date,total,st_date))
+            {
+            JOptionPane.showMessageDialog(null, "Stock edit successfuly!!", "Stock", JOptionPane.INFORMATION_MESSAGE);
+            }
+        else{
+             JOptionPane.showMessageDialog(null, "Stock edit Failed!!", "Stock", JOptionPane.ERROR_MESSAGE);
+            }        
+        }
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"medi id", "medi name", "form", "strength", "package", "unit", "total", "pack ExpDate", "stored date"}));
+        //populate table
+        stock.fillstockTable(jTable1);
+        
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox jComboBox1;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -201,6 +396,5 @@ public class stock extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
