@@ -231,7 +231,7 @@ public class PReport extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "empty fields!!","Appointment", JOptionPane.ERROR_MESSAGE);
         }
         else{     
-             if(report.addreport(id,name,diagnose,description,date))// pass values to class
+             if(report.addreport(id,name,diagnose,description,date) && report.addreportHistory(id,name,diagnose,description,date))// pass values to class
                  {
                  JOptionPane.showMessageDialog(null, "added Successfuly!!","report", JOptionPane.INFORMATION_MESSAGE);
                  }
@@ -276,7 +276,7 @@ public class PReport extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "empty fields!!","Appointment", JOptionPane.ERROR_MESSAGE);
         }
         else{     
-             if(report.editregister(id,name,diagnose,description,date))// pass values to class
+             if(report.editreport(id,name,diagnose,description,date) && report.editreportHistory(id,name,diagnose,description,date))// pass values to class
                  {
                  JOptionPane.showMessageDialog(null, "added Successfuly!!","report", JOptionPane.INFORMATION_MESSAGE);
                  }

@@ -135,6 +135,11 @@ public class stock extends javax.swing.JPanel {
 
         jTextField7.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField7.setOpaque(false);
+        jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField7KeyReleased(evt);
+            }
+        });
         jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 110, -1));
 
         jLabel7.setText("how many package(box) :-");
@@ -237,7 +242,8 @@ public class stock extends javax.swing.JPanel {
         SimpleDateFormat dFormat = new SimpleDateFormat("yyyy-MM-dd");
         String Exp_date = dFormat.format(jDateChooser1.getDate());
         
-        int total= Integer.parseInt(jTextField8.getText());
+        int total = Integer.parseInt(jTextField8.getText());
+        
         
         String st_date = jTextField5.getText();
         
@@ -365,6 +371,16 @@ public class stock extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
+        // TODO add your handling code here:
+        int v=0;
+        v = Integer.parseInt(jTextField6.getText().toString()) * Integer.parseInt(jTextField7.getText().toString());
+        jTextField8.setText(Integer.toString(v));
+        jTextField8.setEditable(false);
+        
+        
+    }//GEN-LAST:event_jTextField7KeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

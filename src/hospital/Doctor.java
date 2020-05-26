@@ -39,6 +39,7 @@ public class Doctor extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
 
@@ -103,6 +104,15 @@ public class Doctor extends javax.swing.JFrame {
         });
         sidepnl.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
 
+        jButton6.setText("get patient history");
+        jButton6.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        sidepnl.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(210, 560));
         sidepnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 4, -1, -1));
@@ -161,6 +171,11 @@ public class Doctor extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        new CombinePanel(jPanel4, new panels.phistory());
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -202,6 +217,7 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

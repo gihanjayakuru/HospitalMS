@@ -25,6 +25,13 @@ public class RequestMedi extends javax.swing.JPanel {
         initComponents();
         medi.fillmediTable(jTable3);
         request.fillreqstockTable(jTable2);
+        
+        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField3.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField4.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField5.setBackground(new java.awt.Color(0,0,0,1));
+        
     }
 
     /**
@@ -227,6 +234,9 @@ public class RequestMedi extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        
+        
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

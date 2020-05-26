@@ -258,6 +258,7 @@ public class IssueMedi extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Print Failed","Printer Error", JOptionPane.ERROR_MESSAGE);
         }
         }
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

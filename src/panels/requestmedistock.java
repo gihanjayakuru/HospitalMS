@@ -5,10 +5,13 @@
  */
 package panels;
 
+import java.awt.print.PrinterException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.MessageFormat;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -29,6 +32,13 @@ public class requestmedistock extends javax.swing.JPanel {
         initComponents();
         stock.fillstockTable(jTable1);
         request.fillreqstockTable(jTable2);
+        
+        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField3.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField4.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField5.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField6.setBackground(new java.awt.Color(0,0,0,1));
        
     }
 
@@ -49,7 +59,6 @@ public class requestmedistock extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
@@ -61,6 +70,9 @@ public class requestmedistock extends javax.swing.JPanel {
         jTextField5 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(781, 519));
@@ -106,21 +118,17 @@ public class requestmedistock extends javax.swing.JPanel {
         jLabel3.setText("form :-");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 70, -1));
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        jTextField1.setOpaque(false);
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTextField1KeyReleased(evt);
-            }
-        });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 100, -1));
-
         jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField2.setOpaque(false);
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 100, -1));
 
-        jButton1.setText("Issue");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 70, 50));
+        jButton1.setText("Issue selected");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 120, 50));
 
         jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField3.setOpaque(false);
@@ -132,24 +140,41 @@ public class requestmedistock extends javax.swing.JPanel {
         jLabel4.setText("Number of pack:-");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 110, 20));
 
-        jButton2.setText("print");
+        jButton2.setText("print request table");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, -1, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 170, 40));
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setText("request table");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 100, -1));
+
+        jTextField4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField4.setOpaque(false);
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 100, -1));
+
+        jTextField5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField5.setOpaque(false);
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 90, -1));
 
         jLabel7.setText("stored total packs ");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
-        jLabel8.setText("stroed total unit");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 90, -1));
+        jLabel8.setText("unit in1  pack");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 80, -1));
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField1.setOpaque(false);
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 110, -1));
+
+        jLabel9.setText("Total");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 70, -1));
+
+        jTextField6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField6.setOpaque(false);
+        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 90, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel5.setPreferredSize(new java.awt.Dimension(781, 519));
@@ -174,6 +199,24 @@ public class requestmedistock extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         //print issued medi list table
+        String PID = jTextField1.getText();
+        
+        if(PID.trim().equals("")){
+            JOptionPane.showMessageDialog(null,"please enter patient id NUMBER","PRINT", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+        MessageFormat header= new MessageFormat("Request medi list");
+        MessageFormat footer= new MessageFormat(".............ISSUED................");
+        
+        try {
+            jTable2.print(JTable.PrintMode.FIT_WIDTH,header,footer);
+        } catch (PrinterException ex) {
+            JOptionPane.showMessageDialog(null, "Print Failed","Printer Error", JOptionPane.ERROR_MESSAGE);
+        }
+        }
+        
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
@@ -195,31 +238,26 @@ public class requestmedistock extends javax.swing.JPanel {
             }
         }
         
-        jTextField3.setText(model.getValueAt(rIndex,4).toString());
+        //jTextField3.setText(model.getValueAt(rIndex,4).toString());
         
-    }//GEN-LAST:event_jTable2MouseClicked
-
-    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
-        // TODO add your handling code here:
         
         try {
             
+            
             PreparedStatement st;
             ResultSet rs;
-            String Query="SELECT * FROM `stock` WHERE `medi_id`=?";
+            String Query="SELECT * FROM `request_stock` WHERE `medi_id`=?";
             
             st=myconnection.createConnection().prepareStatement(Query);
             
-            st.setString(1, jTextField1.getText());
+            st.setString(1, model.getValueAt(rIndex,0).toString());
             
             rs=st.executeQuery();
             if(rs.next()){
-            
-                String a=rs.getString("pack");
-                jTextField4.setText(a);
-                String b=rs.getString("unit");
-                jTextField5.setText(b);
-            
+
+                String e=rs.getString("num_pack");
+                jTextField3.setText(e);
+                       
             }
   
         } catch (SQLException ex) {
@@ -229,7 +267,75 @@ public class requestmedistock extends javax.swing.JPanel {
         }
         
         
-    }//GEN-LAST:event_jTextField1KeyReleased
+        try {
+            
+            PreparedStatement st;
+            ResultSet rs;
+            String Query="SELECT * FROM `stock` WHERE `medi_id`=?";
+            
+            st=myconnection.createConnection().prepareStatement(Query);
+            
+            st.setString(1, model.getValueAt(rIndex,0).toString());
+            
+            rs=st.executeQuery();
+            if(rs.next()){
+            
+                String a=rs.getString("pack");
+                jTextField4.setText(a);
+                String b=rs.getString("unit");
+                jTextField5.setText(b);
+                String c=rs.getString("total");
+                jTextField6.setText(c);
+                       
+            }
+  
+        } catch (SQLException ex) {
+            
+            JOptionPane.showMessageDialog(null, ex);
+            
+        }
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jTable2MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        String medi_id=jTextField1.getText();
+        String a=jTextField4.getText();
+        String b=jTextField5.getText();
+        String c=jTextField6.getText();
+        String d=jTextField3.getText();
+        
+        int w= Integer.parseInt(d);//request pack
+        int x= Integer.parseInt(a);//stored toatal pack
+        int y= Integer.parseInt(b);//stored total unit in 1 pack
+        int z= Integer.parseInt(c);//total amount in store
+        
+        
+        int aferissuepackstotal=x-w;
+        
+        int reqtotal=w*y;
+        int nowtotal=z;
+        int afterissuetotal=nowtotal-reqtotal;
+        
+        //int total = Integer.parseInt(jTextField3.getText());
+        //jTextField1.setText(Integer.toString(sum));
+        
+        int pack=aferissuepackstotal;
+        int total=afterissuetotal;
+                
+        stock.editstock_inreq(medi_id,pack,total);
+        
+        jTable1.setModel(new DefaultTableModel(null,new Object[]{"medi id", "medi name", "form", "strength", "package", "unit", "total", "pack ExpDate", "stored date"}));
+        //populate table
+        stock.fillstockTable(jTable1);
+
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -244,6 +350,7 @@ public class requestmedistock extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -254,5 +361,6 @@ public class requestmedistock extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }

@@ -83,6 +83,30 @@ public class SSTOCK {
         }          
     }
     
+    public boolean editstock_inreq(String medi_id, int pack, int total)
+    {
+        PreparedStatement st;
+        ResultSet rs;
+        String editQuery="UPDATE `stock` SET `pack`=?,`total`=? WHERE `medi_id`=?";
+        
+        try {
+            st=myconnection.createConnection().prepareStatement(editQuery);
+              
+            st.setInt(1, pack);                
+            st.setInt(2, total);       
+            st.setString(3, medi_id);
+            
+            
+            return (st.executeUpdate()>0); 
+            
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(SSTOCK.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }          
+    }
+    
+    
     public boolean removestock(String medi_id)
      {
         PreparedStatement st;

@@ -116,6 +116,45 @@ public class PATIENTMEDI {
         }
     
     } 
+    
+    public void fillmedihistoryTable(JTable table)
+    {
+        PreparedStatement ps;
+        ResultSet rs;
+        String selectQuery = "SELECT * FROM `patient_medi_list_history`";
+        
+        try {
+            
+            
+            ps = myconnection.createConnection().prepareStatement(selectQuery);
+            
+            rs = ps.executeQuery();
+            
+            DefaultTableModel tablemodel= (DefaultTableModel)table.getModel();
+            
+            Object[] row;
+            
+            while(rs.next())
+            {
+                row = new Object[6];//column on table
+                row[0]=rs.getString(1);
+                row[1]= rs.getString(2);
+                row[2]= rs.getString(3);
+                row[3]=rs.getString(4);
+                row[4]= rs.getString(5);
+                row[5]=rs.getString(6);
+                
+                tablemodel.addRow(row);
+            }
+        
+        } catch (SQLException ex) {
+            Logger.getLogger(PATIENTMEDI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    }
+    
+    
+    
      
     public boolean editmedilist(String pid,String mediname,String daytime,int count,String be_af,String date)
     {
