@@ -60,7 +60,7 @@ public class IssueMedi extends javax.swing.JPanel {
         jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(781, 519));
+        setPreferredSize(new java.awt.Dimension(780, 540));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Patient ID:-");
@@ -135,7 +135,8 @@ public class IssueMedi extends javax.swing.JPanel {
         add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 790, 520));
+        jLabel2.setPreferredSize(new java.awt.Dimension(780, 540));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     public void issuetable(){
