@@ -88,6 +88,11 @@ public class addEmployee extends javax.swing.JPanel {
                 "id", "name", "position", "gender"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 60, 430, 270));
@@ -257,6 +262,39 @@ public class addEmployee extends javax.swing.JPanel {
         //populate table
         employee.fillemployeeTable(jTable1);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel  model = (DefaultTableModel)jTable1.getModel();
+        
+        int rIndex = jTable1.getSelectedRow();//get the select row index
+        
+        jTextField1.setText(model.getValueAt(rIndex,0).toString());
+        jTextField2.setText(model.getValueAt(rIndex,1).toString());
+        
+        String form=model.getValueAt(rIndex, 2).toString();
+        for(int i=0; i<jComboBox1.getItemCount(); i++)
+        {
+            if(jComboBox1.getItemAt(i).toString().equalsIgnoreCase(form))
+            {
+                jComboBox1.setSelectedIndex(i);
+            }
+        }
+        
+        String gender = model.getValueAt(rIndex,3).toString();
+        if(gender.equals("Male"))
+        {
+            jRadioButton1.setSelected(true);
+        }
+        else if(gender.equals("Female"))
+        {
+            jRadioButton2.setSelected(true);
+            
+        }
+        
+        
+        
+    }//GEN-LAST:event_jTable1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -61,7 +61,7 @@ public class EMPLOYEE {
             st.setString(1, name);
             st.setString(2, position);
             st.setString(3, gender);
-            st.setString(5, id);    
+            st.setString(4, id);    
             
             
             if(st.executeUpdate()>0)

@@ -27,7 +27,12 @@ public class docPadmitdis extends javax.swing.JPanel {
     
     public docPadmitdis() {
         initComponents();
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField3.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField4.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField5.setBackground(new java.awt.Color(0,0,0,1));
         currentdate();
+        
         //filter();
         //admit.fillreporttable(jTable1);
         report.fillreporttable(jTable1);
@@ -139,10 +144,16 @@ public class docPadmitdis extends javax.swing.JPanel {
 
         jLabel5.setText("diagnose:-");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
+
+        jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField3.setOpaque(false);
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 110, -1));
 
         jLabel6.setText("Patient Name:-");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+
+        jTextField4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField4.setOpaque(false);
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 120, -1));
 
         jButton2.setText("discharge");
@@ -153,12 +164,17 @@ public class docPadmitdis extends javax.swing.JPanel {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
 
+        jTextField5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField5.setOpaque(false);
         jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextField5KeyReleased(evt);
             }
         });
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 100, -1));
+
+        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jTextField2.setOpaque(false);
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 90, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N

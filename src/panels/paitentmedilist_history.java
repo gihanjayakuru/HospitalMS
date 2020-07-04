@@ -20,6 +20,11 @@ public class paitentmedilist_history extends javax.swing.JPanel {
     
     public paitentmedilist_history() {
         initComponents();
+        jTextField1.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField7.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField8.setBackground(new java.awt.Color(0,0,0,1));
+        
         medilist.fillmedihistoryTable(jTable1);
     }
 
@@ -48,7 +53,6 @@ public class paitentmedilist_history extends javax.swing.JPanel {
         jTextField7 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -114,9 +118,6 @@ public class paitentmedilist_history extends javax.swing.JPanel {
 
         jLabel6.setText("ID:-");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 20, -1));
-
-        jTextField3.setText("jTextField3");
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
 
         jButton1.setText("get list");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
@@ -186,7 +187,6 @@ public class paitentmedilist_history extends javax.swing.JPanel {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables

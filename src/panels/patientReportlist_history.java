@@ -25,6 +25,12 @@ public class patientReportlist_history extends javax.swing.JPanel {
     
     public patientReportlist_history() {
         initComponents();
+        jTextField2.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField3.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField4.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField5.setBackground(new java.awt.Color(0,0,0,1));
+        jTextField6.setBackground(new java.awt.Color(0,0,0,1));
+        
         report.fillreporttable(jTable1);
     }
 
