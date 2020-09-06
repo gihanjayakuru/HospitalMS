@@ -36,6 +36,7 @@ public class Appointment extends javax.swing.JPanel {
         
     }
     
+    
     public void currentdate(){
     
         Calendar cal = new GregorianCalendar();

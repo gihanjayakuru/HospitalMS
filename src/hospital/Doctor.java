@@ -5,6 +5,7 @@
  */
 package hospital;
 
+import javax.swing.JFrame;
 import panels.CombinePanel;
 
 /**
@@ -19,6 +20,7 @@ public class Doctor extends javax.swing.JFrame {
     public Doctor() {
         initComponents();
         new CombinePanel(jPanel4, new panels.PReport());
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -69,35 +71,54 @@ public class Doctor extends javax.swing.JFrame {
         sidepnl.setPreferredSize(new java.awt.Dimension(200, 560));
         sidepnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setText("add medi list");
-        jButton2.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Add Medicines.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Add Medicines.png"))); // NOI18N
+        jButton2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Add Medicines.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 200, -1));
+        sidepnl.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
 
-        jButton3.setText("add to clinic");
-        jButton3.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Add To Clinic.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Add To Clinic.png"))); // NOI18N
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Add To Clinic.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, -1, -1));
+        sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, -1, -1));
 
-        jButton4.setText("admit discharge");
-        jButton4.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/AdmitDischarge.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setContentAreaFilled(false);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton4.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/AdmitDischarge.png"))); // NOI18N
+        jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/AdmitDischarge.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, -1, -1));
+        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, -1, -1));
 
-        jButton5.setText("patient reports");
-        jButton5.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Patient Report.png"))); // NOI18N
+        jButton5.setBorder(null);
+        jButton5.setContentAreaFilled(false);
+        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton5.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Patient Report.png"))); // NOI18N
+        jButton5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Patient Report.png"))); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -105,23 +126,33 @@ public class Doctor extends javax.swing.JFrame {
         });
         sidepnl.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
 
-        jButton6.setText("get patient report history");
-        jButton6.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Report History.png"))); // NOI18N
+        jButton6.setBorder(null);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton6.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Report History.png"))); // NOI18N
+        jButton6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Report History.png"))); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
+        sidepnl.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, -1));
 
-        jButton7.setText("get patient medi history");
-        jButton7.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Medicine History.png"))); // NOI18N
+        jButton7.setBorder(null);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton7.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Medicine History.png"))); // NOI18N
+        jButton7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Medicine History.png"))); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, -1, -1));
+        sidepnl.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(210, 560));

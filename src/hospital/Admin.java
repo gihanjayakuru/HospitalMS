@@ -5,6 +5,8 @@
  */
 package hospital;
 
+import java.awt.Frame;
+import javax.swing.JFrame;
 import panels.CombinePanel;
 
 /**
@@ -19,6 +21,8 @@ public class Admin extends javax.swing.JFrame {
     public Admin() {
         initComponents();
         new CombinePanel(jPanel4, new panels.addEmployee());
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        
     }
 
     /**
@@ -61,24 +65,34 @@ public class Admin extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(980, 70));
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
 
         sidepnl.setPreferredSize(new java.awt.Dimension(200, 560));
         sidepnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Add Employee");
-        jButton1.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Nadd employee.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton1.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Cadd employee.png"))); // NOI18N
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Hadd employee.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
+        sidepnl.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, -1, -1));
 
-        jButton2.setText("Manage Doctors");
-        jButton2.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Manage doctors.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Manage doctors.png"))); // NOI18N
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Manage doctors.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -86,46 +100,54 @@ public class Admin extends javax.swing.JFrame {
         });
         sidepnl.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, -1, -1));
 
-        jButton3.setText("Manage Nurse");
-        jButton3.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Manage nurses.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Manage nurses.png"))); // NOI18N
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Manage nurses.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, -1, -1));
+        sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, -1));
 
-        jButton4.setText("Staff Status");
-        jButton4.setPreferredSize(new java.awt.Dimension(200, 43));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Staff status.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setContentAreaFilled(false);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton4.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Staff status.png"))); // NOI18N
+        jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Staff status.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, -1));
+        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel2.setPreferredSize(new java.awt.Dimension(210, 560));
-        sidepnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
+        jLabel2.setMaximumSize(new java.awt.Dimension(1024, 678));
+        jLabel2.setMinimumSize(new java.awt.Dimension(1024, 678));
+        jLabel2.setPreferredSize(new java.awt.Dimension(1024, 678));
+        sidepnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 660));
 
-        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
+        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 210, 660));
 
         jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 780, 540));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1030, 660));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

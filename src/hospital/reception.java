@@ -6,6 +6,7 @@
 package hospital;
 
 import javafx.animation.Animation;
+import javax.swing.JFrame;
 import panels.CombinePanel;
 
 /**
@@ -21,6 +22,7 @@ public class reception extends javax.swing.JFrame {
         initComponents();
         new CombinePanel(panel1, new panels.Register());
         this.setLocationRelativeTo(this);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -61,7 +63,7 @@ public class reception extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 41, 46));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/7NPaqi.jpg"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -4, 990, 80));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 70));
@@ -72,6 +74,7 @@ public class reception extends javax.swing.JFrame {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/reception btn normal.png"))); // NOI18N
         jButton2.setBorder(null);
         jButton2.setContentAreaFilled(false);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setPreferredSize(new java.awt.Dimension(200, 60));
         jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/reception btn click.png"))); // NOI18N
         jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/reception btn hover.png"))); // NOI18N
@@ -107,7 +110,7 @@ public class reception extends javax.swing.JFrame {
         });
         sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 198, 200, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/7NPaqi.jpg"))); // NOI18N
         sidepnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-8, 12, 210, 550));
 
         jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 200, 560));

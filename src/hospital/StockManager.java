@@ -5,6 +5,7 @@
  */
 package hospital;
 
+import javax.swing.JFrame;
 import panels.CombinePanel;
 
 /**
@@ -19,6 +20,7 @@ public class StockManager extends javax.swing.JFrame {
     public StockManager() {
         initComponents();
         new CombinePanel(jPanel4, new panels.addmedilist());
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**

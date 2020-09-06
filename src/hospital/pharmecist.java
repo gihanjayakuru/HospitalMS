@@ -5,7 +5,11 @@
  */
 package hospital;
 
+import java.awt.Dimension;
 import javafx.animation.Animation;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import panels.CombinePanel;
 /**
  *
@@ -16,10 +20,14 @@ public class pharmecist extends javax.swing.JFrame {
     /**
      * Creates new form pharmecist
      */
+    
     public pharmecist() {
         initComponents();
+        
         new CombinePanel(jPanel4, new panels.IssueMedi());
     }
+    
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -112,6 +120,8 @@ public class pharmecist extends javax.swing.JFrame {
         else{
             Animacion.Animacion.mover_izquierda(0, 0, 2, 2, sidepnl);
         }
+          
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
