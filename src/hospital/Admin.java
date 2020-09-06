@@ -4,7 +4,13 @@
  * and open the template in the editor.
  */
 package hospital;
-
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import java.awt.Frame;
 import javax.swing.JFrame;
 import panels.CombinePanel;
@@ -137,7 +143,7 @@ public class Admin extends javax.swing.JFrame {
         jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 210, 660));
 
         jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1030, 660));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 820, 660));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

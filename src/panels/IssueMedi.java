@@ -60,7 +60,9 @@ public class IssueMedi extends javax.swing.JPanel {
         jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(780, 540));
+        setMaximumSize(new java.awt.Dimension(820, 660));
+        setMinimumSize(new java.awt.Dimension(820, 660));
+        setPreferredSize(new java.awt.Dimension(820, 660));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Patient ID:-");
@@ -105,14 +107,14 @@ public class IssueMedi extends javax.swing.JPanel {
 
         jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField2.setOpaque(false);
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 50, -1));
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 60, -1));
 
         jLabel3.setText("count:-");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 60, 20));
 
         jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField3.setOpaque(false);
-        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 100, -1));
+        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 130, -1));
 
         jLabel4.setText("Medi Name:-");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 154, 60, 30));
@@ -124,7 +126,7 @@ public class IssueMedi extends javax.swing.JPanel {
                 jTextField4KeyReleased(evt);
             }
         });
-        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 80, -1));
+        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 120, -1));
 
         jButton4.setText("ISSUE DONE");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -135,8 +137,10 @@ public class IssueMedi extends javax.swing.JPanel {
         add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel2.setPreferredSize(new java.awt.Dimension(780, 540));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, -1));
+        jLabel2.setMaximumSize(new java.awt.Dimension(820, 660));
+        jLabel2.setMinimumSize(new java.awt.Dimension(820, 660));
+        jLabel2.setPreferredSize(new java.awt.Dimension(820, 660));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     public void issuetable(){

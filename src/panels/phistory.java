@@ -108,7 +108,7 @@ public class phistory extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, 150));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 520, 150));
 
         jLabel2.setText("patient_report_list_history table");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 180, 30));
@@ -129,7 +129,7 @@ public class phistory extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, -1, 270));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 490, 190));
 
         jLabel4.setText("patient_medi_list_history table");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 14, 180, 30));
@@ -171,7 +171,7 @@ public class phistory extends javax.swing.JPanel {
         jLabel8.setText("count");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/7NPaqi.jpg"))); // NOI18N
         jLabel5.setPreferredSize(new java.awt.Dimension(781, 519));
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 

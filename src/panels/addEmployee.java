@@ -55,34 +55,34 @@ public class addEmployee extends javax.swing.JPanel {
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(1024, 678));
-        setMinimumSize(new java.awt.Dimension(1024, 678));
-        setPreferredSize(new java.awt.Dimension(1024, 678));
+        setMaximumSize(new java.awt.Dimension(820, 660));
+        setMinimumSize(new java.awt.Dimension(820, 660));
+        setPreferredSize(new java.awt.Dimension(820, 660));
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(1024, 678));
-        jPanel1.setMinimumSize(new java.awt.Dimension(1024, 678));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 678));
+        jPanel1.setMaximumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setMinimumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Emp ID");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
 
         jLabel2.setText("Emp Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
 
         jLabel3.setText("chose poition:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, 20));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, 20));
 
         jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField1.setOpaque(false);
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 110, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 110, -1));
 
         jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField2.setOpaque(false);
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 120, -1));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 120, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "DOCTOR", "NURS", "PHAMERCIST", "STOCKMANAGER" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, -1, -1));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -99,7 +99,7 @@ public class addEmployee extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 510, 270));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 410, 280));
 
         jButton1.setText("ADD");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class addEmployee extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 300, 70, 30));
 
         jButton2.setText("EDIT");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class addEmployee extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 60, 30));
 
         jButton3.setText("REMOVE");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -123,16 +123,16 @@ public class addEmployee extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 90, 30));
 
         jLabel8.setText("Gender");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
 
         jRadioButton1.setBackground(new java.awt.Color(255, 102, 0));
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Male");
         jRadioButton1.setOpaque(false);
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, -1, -1));
+        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
 
         jRadioButton2.setBackground(new java.awt.Color(255, 102, 0));
         buttonGroup1.add(jRadioButton2);
@@ -143,10 +143,12 @@ public class addEmployee extends javax.swing.JPanel {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, -1, -1));
+        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel4.setPreferredSize(new java.awt.Dimension(1024, 678));
+        jLabel4.setMaximumSize(new java.awt.Dimension(820, 660));
+        jLabel4.setMinimumSize(new java.awt.Dimension(820, 660));
+        jLabel4.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

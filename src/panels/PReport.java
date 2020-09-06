@@ -84,9 +84,13 @@ public class PReport extends javax.swing.JPanel {
         jTextField6 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(781, 519));
+        setMaximumSize(new java.awt.Dimension(820, 660));
+        setMinimumSize(new java.awt.Dimension(820, 660));
+        setPreferredSize(new java.awt.Dimension(820, 660));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(781, 519));
+        jPanel1.setMaximumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setMinimumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("search Patient:-");
@@ -130,7 +134,7 @@ public class PReport extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 370, 200));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 410, 200));
 
         jButton1.setText("Save report");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -188,7 +192,7 @@ public class PReport extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 380, 90));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 420, 90));
 
         jTextField6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField6.setOpaque(false);
@@ -200,8 +204,10 @@ public class PReport extends javax.swing.JPanel {
         jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 110, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel5.setPreferredSize(new java.awt.Dimension(781, 519));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 0, -1, 520));
+        jLabel5.setMaximumSize(new java.awt.Dimension(820, 660));
+        jLabel5.setMinimumSize(new java.awt.Dimension(820, 660));
+        jLabel5.setPreferredSize(new java.awt.Dimension(820, 660));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -213,7 +219,7 @@ public class PReport extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

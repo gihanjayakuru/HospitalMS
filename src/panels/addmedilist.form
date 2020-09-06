@@ -2,8 +2,14 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
+    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[820, 660]"/>
+    </Property>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[820, 660]"/>
+    </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[781, 519]"/>
+      <Dimension value="[820, 660]"/>
     </Property>
   </Properties>
   <AuxValues>
@@ -39,8 +45,14 @@
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[820, 660]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[820, 660]"/>
+        </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[781, 519]"/>
+          <Dimension value="[820, 660]"/>
         </Property>
       </Properties>
 
@@ -108,7 +120,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="292" y="30" width="410" height="270"/>
+              <AbsoluteConstraints x="262" y="30" width="510" height="260"/>
             </Constraint>
           </Constraints>
 
@@ -259,7 +271,7 @@
               <Image iconType="3" name="/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[781, 519]"/>
+              <Dimension value="[820, 660]"/>
             </Property>
           </Properties>
           <Constraints>

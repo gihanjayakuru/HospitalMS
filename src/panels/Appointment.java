@@ -82,7 +82,9 @@ public class Appointment extends javax.swing.JPanel {
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(780, 540));
+        setMaximumSize(new java.awt.Dimension(820, 660));
+        setMinimumSize(new java.awt.Dimension(820, 660));
+        setPreferredSize(new java.awt.Dimension(820, 660));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("ADD APPOINTMENT");
@@ -149,7 +151,7 @@ public class Appointment extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jTable1);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 410, 220));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 450, 220));
 
         jLabel12.setText("time:");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, -1, -1));
@@ -194,7 +196,10 @@ public class Appointment extends javax.swing.JPanel {
         add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 540));
+        jLabel1.setMaximumSize(new java.awt.Dimension(820, 660));
+        jLabel1.setMinimumSize(new java.awt.Dimension(820, 660));
+        jLabel1.setPreferredSize(new java.awt.Dimension(820, 660));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

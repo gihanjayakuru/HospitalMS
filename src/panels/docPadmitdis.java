@@ -88,9 +88,13 @@ public class docPadmitdis extends javax.swing.JPanel {
         jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(781, 519));
+        setMaximumSize(new java.awt.Dimension(820, 660));
+        setMinimumSize(new java.awt.Dimension(820, 660));
+        setPreferredSize(new java.awt.Dimension(820, 660));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(781, 519));
+        jPanel1.setMaximumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setMinimumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -108,7 +112,7 @@ public class docPadmitdis extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 50, 400, 160));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 50, 490, 210));
 
         jLabel1.setText("Patient ID:-");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
@@ -126,7 +130,7 @@ public class docPadmitdis extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 460, 220));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 490, 220));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "word 1", "word 2", "word 3", "word 4" }));
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, -1, -1));
@@ -178,22 +182,24 @@ public class docPadmitdis extends javax.swing.JPanel {
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 90, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel4.setPreferredSize(new java.awt.Dimension(781, 519));
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 520));
+        jLabel4.setMaximumSize(new java.awt.Dimension(820, 660));
+        jLabel4.setMinimumSize(new java.awt.Dimension(820, 660));
+        jLabel4.setPreferredSize(new java.awt.Dimension(820, 660));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 781, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -69,9 +69,13 @@ public class Register extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(780, 540));
+        setMaximumSize(new java.awt.Dimension(820, 660));
+        setMinimumSize(new java.awt.Dimension(820, 660));
+        setPreferredSize(new java.awt.Dimension(820, 660));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(780, 540));
+        jPanel1.setMaximumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setMinimumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -89,7 +93,7 @@ public class Register extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 480, 320));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 550, 320));
 
         jLabel1.setText("Patient ID:-");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 60, 20));
@@ -178,8 +182,10 @@ public class Register extends javax.swing.JPanel {
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 170, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/Beautiful Backgrounds-036.png"))); // NOI18N
-        jLabel2.setPreferredSize(new java.awt.Dimension(780, 540));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 781, 540));
+        jLabel2.setMaximumSize(new java.awt.Dimension(820, 660));
+        jLabel2.setMinimumSize(new java.awt.Dimension(820, 660));
+        jLabel2.setPreferredSize(new java.awt.Dimension(820, 660));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

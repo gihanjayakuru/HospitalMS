@@ -53,9 +53,13 @@ public class addmedilist extends javax.swing.JPanel {
         jComboBox1 = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(781, 519));
+        setMaximumSize(new java.awt.Dimension(820, 660));
+        setMinimumSize(new java.awt.Dimension(820, 660));
+        setPreferredSize(new java.awt.Dimension(820, 660));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(781, 519));
+        jPanel1.setMaximumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setMinimumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Medi Name :");
@@ -87,7 +91,7 @@ public class addmedilist extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(292, 30, 410, 270));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(262, 30, 510, 260));
 
         jButton1.setText("ADD");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +131,7 @@ public class addmedilist extends javax.swing.JPanel {
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 100, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel5.setPreferredSize(new java.awt.Dimension(781, 519));
+        jLabel5.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

@@ -77,9 +77,13 @@ public class requestmedistock extends javax.swing.JPanel {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(781, 519));
+        setMaximumSize(new java.awt.Dimension(820, 660));
+        setMinimumSize(new java.awt.Dimension(820, 660));
+        setPreferredSize(new java.awt.Dimension(820, 660));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(781, 519));
+        jPanel1.setMaximumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setMinimumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -97,7 +101,7 @@ public class requestmedistock extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 450, 210));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 490, 210));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -109,7 +113,7 @@ public class requestmedistock extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 490, 260));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 490, 260));
 
         jLabel1.setText("Medi ID :-");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 80, -1));
@@ -151,7 +155,7 @@ public class requestmedistock extends javax.swing.JPanel {
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 470, 140, 40));
 
         jLabel6.setText("request table");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 100, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 100, -1));
 
         jTextField4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField4.setOpaque(false);
@@ -186,7 +190,9 @@ public class requestmedistock extends javax.swing.JPanel {
         jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 330, 250, 120));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel5.setPreferredSize(new java.awt.Dimension(781, 519));
+        jLabel5.setMaximumSize(new java.awt.Dimension(820, 660));
+        jLabel5.setMinimumSize(new java.awt.Dimension(820, 660));
+        jLabel5.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

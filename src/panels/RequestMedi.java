@@ -67,9 +67,13 @@ public class RequestMedi extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(781, 519));
+        setMaximumSize(new java.awt.Dimension(820, 660));
+        setMinimumSize(new java.awt.Dimension(820, 660));
+        setPreferredSize(new java.awt.Dimension(820, 660));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(781, 519));
+        jPanel1.setMaximumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setMinimumSize(new java.awt.Dimension(820, 660));
+        jPanel1.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Form :-");
@@ -123,7 +127,7 @@ public class RequestMedi extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 440, 250));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 460, 250));
 
         jButton2.setText("add to list");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -159,7 +163,7 @@ public class RequestMedi extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(jTable3);
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 440, 210));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 460, 210));
 
         jLabel6.setText("Strength :-");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 60, 20));
@@ -178,8 +182,10 @@ public class RequestMedi extends javax.swing.JPanel {
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 294, 120, 20));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel5.setPreferredSize(new java.awt.Dimension(781, 519));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-9, 0, 790, 520));
+        jLabel5.setMaximumSize(new java.awt.Dimension(820, 660));
+        jLabel5.setMinimumSize(new java.awt.Dimension(820, 660));
+        jLabel5.setPreferredSize(new java.awt.Dimension(820, 660));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

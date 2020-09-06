@@ -44,8 +44,13 @@ public class StockManager extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1024, 730));
+        setMinimumSize(new java.awt.Dimension(1024, 730));
+        setPreferredSize(new java.awt.Dimension(1024, 730));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(980, 610));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1024, 730));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1024, 730));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 730));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setPreferredSize(new java.awt.Dimension(980, 70));
@@ -62,15 +67,20 @@ public class StockManager extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(980, 70));
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
 
         sidepnl.setPreferredSize(new java.awt.Dimension(200, 560));
         sidepnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setText("ADD Medi");
-        jButton3.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Add Medicines.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Add Medicines.png"))); // NOI18N
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Add Medicines.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -78,33 +88,44 @@ public class StockManager extends javax.swing.JFrame {
         });
         sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, -1, -1));
 
-        jButton4.setText("stock");
-        jButton4.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Add Stock.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setContentAreaFilled(false);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton4.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Add Stock.png"))); // NOI18N
+        jButton4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Add Stock.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
+        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
 
-        jButton5.setText("show request stock");
-        jButton5.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Request Stocks.png"))); // NOI18N
+        jButton5.setBorder(null);
+        jButton5.setContentAreaFilled(false);
+        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton5.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Request Stocks.png"))); // NOI18N
+        jButton5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Request Stocks.png"))); // NOI18N
+        jButton5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Request Stocks.png"))); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, -1, -1));
+        sidepnl.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(200, 560));
-        sidepnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 210, 550));
+        sidepnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 210, 670));
 
-        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, 560));
+        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, 680));
 
-        jPanel4.setPreferredSize(new java.awt.Dimension(780, 540));
+        jPanel4.setPreferredSize(new java.awt.Dimension(820, 660));
         jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 780, 540));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 820, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

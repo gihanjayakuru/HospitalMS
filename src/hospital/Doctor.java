@@ -48,7 +48,7 @@ public class Doctor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(980, 610));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 730));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setPreferredSize(new java.awt.Dimension(980, 70));
@@ -64,9 +64,9 @@ public class Doctor extends javax.swing.JFrame {
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-9, -8, 990, 80));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-9, -8, 1040, 80));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 70));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 70));
 
         sidepnl.setPreferredSize(new java.awt.Dimension(200, 560));
         sidepnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -118,7 +118,7 @@ public class Doctor extends javax.swing.JFrame {
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton5.setPreferredSize(new java.awt.Dimension(200, 60));
         jButton5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Patient Report.png"))); // NOI18N
-        jButton5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Patient Report.png"))); // NOI18N
+        jButton5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Patient Report.png"))); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -156,25 +156,23 @@ public class Doctor extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(210, 560));
-        sidepnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 4, -1, -1));
+        sidepnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 4, -1, 680));
 
-        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 200, 560));
+        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 200, 680));
 
         jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 780, 540));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 820, 660));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -206,9 +204,12 @@ public class Doctor extends javax.swing.JFrame {
         // TODO add your handling code here:
         int position= this.sidepnl.getX();
         if(position >-1){
-        Animacion.Animacion.mover_izquierda(0, -200, 2, 2, sidepnl);}
+        Animacion.Animacion.mover_izquierda(0, -200, 2, 2, sidepnl);
+        
+        }
         else{
             Animacion.Animacion.mover_izquierda(0, 0, 2, 2, sidepnl);
+            
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

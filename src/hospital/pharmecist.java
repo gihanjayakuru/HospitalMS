@@ -49,7 +49,13 @@ public class pharmecist extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1024, 730));
+        setMinimumSize(new java.awt.Dimension(1024, 730));
+        setPreferredSize(new java.awt.Dimension(1024, 730));
 
+        jPanel1.setMaximumSize(new java.awt.Dimension(1024, 730));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1024, 730));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 730));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -64,15 +70,22 @@ public class pharmecist extends javax.swing.JFrame {
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 45, 54));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 70));
+        jLabel1.setMaximumSize(new java.awt.Dimension(820, 660));
+        jLabel1.setMinimumSize(new java.awt.Dimension(820, 660));
+        jLabel1.setPreferredSize(new java.awt.Dimension(820, 660));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 70));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         sidepnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setText("REQUEST MEDI STOCK");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Request Stocks.png"))); // NOI18N
+        jButton2.setBorder(null);
         jButton2.setContentAreaFilled(false);
-        jButton2.setPreferredSize(new java.awt.Dimension(191, 59));
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Request Stocks.png"))); // NOI18N
+        jButton2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Request Stocks.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -80,23 +93,29 @@ public class pharmecist extends javax.swing.JFrame {
         });
         sidepnl.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 200, -1));
 
-        jButton3.setText("ISSUE MEDICINE");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Issue Medicine.png"))); // NOI18N
+        jButton3.setBorder(null);
         jButton3.setContentAreaFilled(false);
-        jButton3.setPreferredSize(new java.awt.Dimension(191, 59));
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Issue Medicine.png"))); // NOI18N
+        jButton3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Issue Medicine.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 200, -1));
+        sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, -1, -1));
 
         sidepnllabl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        sidepnl.add(sidepnllabl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 16, 200, 550));
+        sidepnl.add(sidepnllabl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 16, 200, 670));
 
-        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 200, 560));
+        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 200, 680));
 
+        jPanel4.setMaximumSize(new java.awt.Dimension(820, 660));
+        jPanel4.setMinimumSize(new java.awt.Dimension(820, 660));
         jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 780, 540));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 820, 660));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
