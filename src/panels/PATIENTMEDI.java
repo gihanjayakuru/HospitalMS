@@ -255,9 +255,10 @@ public class PATIENTMEDI {
     
     public boolean removemedilisthistory(String mediname)
     {
+        //medi_name
         PreparedStatement st;
         ResultSet rs;
-        String deleteQuery="DELETE FROM `patient_medi_list_history` WHERE `medi_name`=?";
+        String deleteQuery="DELETE FROM `patient_medi_list_history` WHERE `id`=?";
         
         try {
             st=myconnection.createConnection().prepareStatement(deleteQuery);

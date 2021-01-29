@@ -58,13 +58,14 @@ public class IssueMedi extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(820, 660));
-        setMinimumSize(new java.awt.Dimension(820, 660));
-        setPreferredSize(new java.awt.Dimension(820, 660));
+        setBackground(new java.awt.Color(44, 52, 58));
+        setMaximumSize(new java.awt.Dimension(1190, 750));
+        setMinimumSize(new java.awt.Dimension(1190, 750));
+        setPreferredSize(new java.awt.Dimension(1190, 750));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Patient ID:-");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 60, -1));
 
@@ -105,20 +106,25 @@ public class IssueMedi extends javax.swing.JPanel {
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 450, 200));
 
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
         jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField2.setOpaque(false);
         add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 60, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("count:-");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 60, 20));
 
+        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
         jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField3.setOpaque(false);
         add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 130, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Medi Name:-");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 154, 60, 30));
 
+        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
         jTextField4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField4.setOpaque(false);
         jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -135,12 +141,6 @@ public class IssueMedi extends javax.swing.JPanel {
             }
         });
         add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, 30));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel2.setMaximumSize(new java.awt.Dimension(820, 660));
-        jLabel2.setMinimumSize(new java.awt.Dimension(820, 660));
-        jLabel2.setPreferredSize(new java.awt.Dimension(820, 660));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     public void issuetable(){
@@ -271,7 +271,6 @@ public class IssueMedi extends javax.swing.JPanel {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane2;

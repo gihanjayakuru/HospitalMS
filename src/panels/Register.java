@@ -67,15 +67,15 @@ public class Register extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(820, 660));
-        setMinimumSize(new java.awt.Dimension(820, 660));
-        setPreferredSize(new java.awt.Dimension(820, 660));
+        setMaximumSize(new java.awt.Dimension(1190, 750));
+        setMinimumSize(new java.awt.Dimension(1190, 750));
+        setPreferredSize(new java.awt.Dimension(1190, 750));
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(820, 660));
-        jPanel1.setMinimumSize(new java.awt.Dimension(820, 660));
-        jPanel1.setPreferredSize(new java.awt.Dimension(820, 660));
+        jPanel1.setBackground(new java.awt.Color(44, 52, 58));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1190, 750));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1190, 750));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1190, 750));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -93,42 +93,53 @@ public class Register extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 550, 320));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 770, 320));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Patient ID:-");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 60, 20));
 
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField1.setOpaque(false);
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 110, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Patient Name:-");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 90, 20));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Gardien Name:-");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 80, -1));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Gardien ID:-");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Gardien Contact:-");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Address:-");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
 
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
         jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField2.setOpaque(false);
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 110, -1));
 
+        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
         jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField3.setOpaque(false);
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 110, -1));
 
+        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
         jTextField4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField4.setOpaque(false);
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 110, -1));
 
+        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
         jTextField5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField5.setOpaque(false);
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 110, -1));
@@ -137,35 +148,49 @@ public class Register extends javax.swing.JPanel {
         jTextArea1.setRows(5);
         jScrollPane2.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 160, 120));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 240, 130));
 
-        jButtonSave.setText("Save");
+        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/1.png"))); // NOI18N
+        jButtonSave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonSave.setContentAreaFilled(false);
+        jButtonSave.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/1.png"))); // NOI18N
+        jButtonSave.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/1.png"))); // NOI18N
         jButtonSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSaveActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, -1, -1));
+        jPanel1.add(jButtonSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 460, 60, 60));
 
-        jButtonEdit.setText("Edit");
+        jButtonEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/2.png"))); // NOI18N
+        jButtonEdit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonEdit.setContentAreaFilled(false);
+        jButtonEdit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/2.png"))); // NOI18N
+        jButtonEdit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/2.png"))); // NOI18N
         jButtonEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEditActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, -1, -1));
+        jPanel1.add(jButtonEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, 60, 60));
 
-        jButtonRemove.setText("Remove");
+        jButtonRemove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/3.png"))); // NOI18N
+        jButtonRemove.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonRemove.setContentAreaFilled(false);
+        jButtonRemove.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/3.png"))); // NOI18N
+        jButtonRemove.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/3.png"))); // NOI18N
         jButtonRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRemoveActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, -1, -1));
+        jPanel1.add(jButtonRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 460, 60, 60));
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Search");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 40, 20));
 
+        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
         jTextField6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField6.setOpaque(false);
         jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -178,14 +203,9 @@ public class Register extends javax.swing.JPanel {
         });
         jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 120, -1));
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("OPD Register Patients");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 170, 40));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Button icons/Beautiful Backgrounds-036.png"))); // NOI18N
-        jLabel2.setMaximumSize(new java.awt.Dimension(820, 660));
-        jLabel2.setMinimumSize(new java.awt.Dimension(820, 660));
-        jLabel2.setPreferredSize(new java.awt.Dimension(820, 660));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -386,7 +406,6 @@ public class Register extends javax.swing.JPanel {
     private javax.swing.JButton jButtonRemove;
     private javax.swing.JButton jButtonSave;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

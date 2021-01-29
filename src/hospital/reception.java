@@ -22,7 +22,7 @@ public class reception extends javax.swing.JFrame {
         initComponents();
         new CombinePanel(panel1, new panels.Register());
         this.setLocationRelativeTo(this);
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        
     }
 
     /**
@@ -36,45 +36,50 @@ public class reception extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         sidepnl = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         panel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1024, 730));
         setMinimumSize(new java.awt.Dimension(1024, 730));
-        setPreferredSize(new java.awt.Dimension(1024, 730));
+        setUndecorated(true);
+        setResizable(false);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 51));
         jPanel1.setMaximumSize(new java.awt.Dimension(1024, 730));
         jPanel1.setMinimumSize(new java.awt.Dimension(1024, 730));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 730));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(980, 70));
+        jPanel2.setBackground(new java.awt.Color(34, 40, 44));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1400, 70));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/minsidebar.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/minsidebar1.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/close.png"))); // NOI18N
+        jButton6.setBorder(null);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton6.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/close.png"))); // NOI18N
+        jButton6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/close.png"))); // NOI18N
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton6ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 41, 46));
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 10, 50, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -4, 1030, 80));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 70));
-
-        sidepnl.setPreferredSize(new java.awt.Dimension(200, 560));
+        sidepnl.setBackground(new java.awt.Color(34, 40, 44));
+        sidepnl.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        sidepnl.setMaximumSize(new java.awt.Dimension(210, 750));
+        sidepnl.setMinimumSize(new java.awt.Dimension(210, 750));
+        sidepnl.setPreferredSize(new java.awt.Dimension(210, 750));
         sidepnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Register Patient.png"))); // NOI18N
@@ -96,7 +101,7 @@ public class reception extends javax.swing.JFrame {
         jButton3.setContentAreaFilled(false);
         jButton3.setPreferredSize(new java.awt.Dimension(200, 60));
         jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Doctors Status.png"))); // NOI18N
-        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Doctors Status.png"))); // NOI18N
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Doctors Status.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -118,41 +123,29 @@ public class reception extends javax.swing.JFrame {
         });
         sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 198, 200, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        sidepnl.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-8, 12, 210, 670));
+        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
 
-        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 200, 680));
-
+        panel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         panel1.setMaximumSize(new java.awt.Dimension(820, 660));
         panel1.setMinimumSize(new java.awt.Dimension(820, 660));
-        panel1.setPreferredSize(new java.awt.Dimension(820, 660));
+        panel1.setPreferredSize(new java.awt.Dimension(1190, 750));
         panel1.setLayout(new javax.swing.BoxLayout(panel1, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, -1, -1));
+        jPanel1.add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        int position= this.sidepnl.getX();
-        if(position >-1){
-        Animacion.Animacion.mover_izquierda(0, -150, 2, 2, sidepnl);}
-        else{
-            Animacion.Animacion.mover_izquierda(0, 0, 2, 2, sidepnl);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -169,6 +162,14 @@ public class reception extends javax.swing.JFrame {
         // TODO add your handling code here:
         new CombinePanel(panel1, new panels.Appointment());
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        LOGIN Admin=new LOGIN();
+            Admin.setVisible(true);
+            this.dispose();
+
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,12 +207,10 @@ public class reception extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel panel1;

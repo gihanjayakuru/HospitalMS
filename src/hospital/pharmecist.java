@@ -40,43 +40,48 @@ public class pharmecist extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         sidepnl = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        sidepnllabl = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1024, 730));
         setMinimumSize(new java.awt.Dimension(1024, 730));
-        setPreferredSize(new java.awt.Dimension(1024, 730));
+        setUndecorated(true);
+        setResizable(false);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
         jPanel1.setMaximumSize(new java.awt.Dimension(1024, 730));
         jPanel1.setMinimumSize(new java.awt.Dimension(1024, 730));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 730));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(34, 40, 44));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1400, 70));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/minsidebar.png"))); // NOI18N
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/close.png"))); // NOI18N
+        jButton6.setBorder(null);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton6.setPreferredSize(new java.awt.Dimension(200, 60));
+        jButton6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/close.png"))); // NOI18N
+        jButton6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/close.png"))); // NOI18N
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton6ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 45, 54));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(820, 660));
-        jLabel1.setMinimumSize(new java.awt.Dimension(820, 660));
-        jLabel1.setPreferredSize(new java.awt.Dimension(820, 660));
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 70));
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 10, 50, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        sidepnl.setBackground(new java.awt.Color(34, 40, 44));
+        sidepnl.setMaximumSize(new java.awt.Dimension(210, 750));
+        sidepnl.setMinimumSize(new java.awt.Dimension(210, 750));
+        sidepnl.setPreferredSize(new java.awt.Dimension(210, 750));
         sidepnl.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Request Stocks.png"))); // NOI18N
@@ -107,41 +112,29 @@ public class pharmecist extends javax.swing.JFrame {
         });
         sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, -1, -1));
 
-        sidepnllabl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        sidepnl.add(sidepnllabl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 16, 200, 670));
+        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
 
-        jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 200, 680));
-
+        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setMaximumSize(new java.awt.Dimension(820, 660));
         jPanel4.setMinimumSize(new java.awt.Dimension(820, 660));
+        jPanel4.setPreferredSize(new java.awt.Dimension(1190, 750));
         jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 820, 660));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        int position= this.sidepnl.getX();
-        if(position >-1){
-        Animacion.Animacion.mover_izquierda(0, -200, 2, 2, sidepnl);}
-        else{
-            Animacion.Animacion.mover_izquierda(0, 0, 2, 2, sidepnl);
-        }
-          
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -152,6 +145,14 @@ public class pharmecist extends javax.swing.JFrame {
         // TODO add your handling code here:
         new CombinePanel(jPanel4, new panels.RequestMedi());
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        LOGIN Admin=new LOGIN();
+            Admin.setVisible(true);
+            this.dispose();
+
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,14 +190,12 @@ public class pharmecist extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel sidepnl;
-    private javax.swing.JLabel sidepnllabl;
     // End of variables declaration//GEN-END:variables
 }

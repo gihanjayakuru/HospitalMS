@@ -67,8 +67,6 @@ public class Appointment extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel12 = new javax.swing.JLabel();
@@ -80,42 +78,50 @@ public class Appointment extends javax.swing.JPanel {
         jTextField3 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jLabel1 = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(820, 660));
-        setMinimumSize(new java.awt.Dimension(820, 660));
-        setPreferredSize(new java.awt.Dimension(820, 660));
+        setBackground(new java.awt.Color(44, 52, 58));
+        setMaximumSize(new java.awt.Dimension(1190, 750));
+        setMinimumSize(new java.awt.Dimension(1190, 750));
+        setPreferredSize(new java.awt.Dimension(1190, 750));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ADD APPOINTMENT");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 120, 40));
 
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Patient ID:-");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Chose Clinic:-");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
-        jTextField1.setText("type id");
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField1.setOpaque(false);
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 90, -1));
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 140, -1));
 
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("Clinic 1");
         jRadioButton1.setContentAreaFilled(false);
         add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
 
         buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("Clinic 2");
         jRadioButton2.setContentAreaFilled(false);
         add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
 
         buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("Clinic 3");
         jRadioButton3.setContentAreaFilled(false);
         add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, -1, -1));
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Chose Day:-");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
 
@@ -123,27 +129,10 @@ public class Appointment extends javax.swing.JPanel {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 210, 140));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, 210, 140));
 
-        jButton1.setText("genarate recipt");
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, -1, 40));
-
-        jButton2.setText("print recipt");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 400, -1, 30));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "P.ID", "Clinic", "Date", "time"
-            }
-        ));
+        jTable1.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable1.setOpaque(false);
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable1MouseClicked(evt);
@@ -151,60 +140,67 @@ public class Appointment extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jTable1);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 450, 220));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, 620, 220));
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("time:");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, -1, -1));
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "8-12", "2-4" }));
         add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
 
-        jButton3.setText("edit");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/2.png"))); // NOI18N
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton3.setContentAreaFilled(false);
+        jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/2.png"))); // NOI18N
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/2.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, -1, 30));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 375, -1, -1));
 
-        jButton4.setText("remove");
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/3.png"))); // NOI18N
+        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.setContentAreaFilled(false);
+        jButton4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/3.png"))); // NOI18N
+        jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/3.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, -1, 30));
+        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, 60, 60));
 
+        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("pateint clinic date list table:");
         add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 54, -1, 20));
 
-        jButton5.setText("add");
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/1.png"))); // NOI18N
+        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton5.setContentAreaFilled(false);
+        jButton5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/1.png"))); // NOI18N
+        jButton5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/1.png"))); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, -1, 30));
+        add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 60, 60));
 
+        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
         jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField3.setOpaque(false);
         add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 80, -1));
 
+        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
         jTextField5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 204)));
         jTextField5.setOpaque(false);
-        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 90, -1));
+        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 130, -1));
         add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bCK/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(820, 660));
-        jLabel1.setMinimumSize(new java.awt.Dimension(820, 660));
-        jLabel1.setPreferredSize(new java.awt.Dimension(820, 660));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -237,7 +233,7 @@ public class Appointment extends javax.swing.JPanel {
              }
         }
         
-        jTable1.setModel(new DefaultTableModel(null,new Object[]{"P.ID","Clinic","Date","time"}));
+        //jTable1.setModel(new DefaultTableModel(null,new Object[]{"P.ID","Clinic","Date","time"}));
         //populate table
         appointment.fillappointmentTable(jTable1);
         
@@ -342,7 +338,7 @@ public class Appointment extends javax.swing.JPanel {
                {
                 JOptionPane.showMessageDialog(null, " Deleted Successfuly!!","Remove EMPLOYEE", JOptionPane.INFORMATION_MESSAGE);
                }
-            else{
+                else{
                 JOptionPane.showMessageDialog(null, "Data Delete Failed!!","Remove Employee Error", JOptionPane.ERROR_MESSAGE);
                 }  
             
@@ -353,7 +349,7 @@ public class Appointment extends javax.swing.JPanel {
             }
         
         jTextField1.setText("");
-        jTable1.setModel(new DefaultTableModel(null,new Object[]{"P.ID","Clinic","Date","time"}));
+       // jTable1.setModel(new DefaultTableModel(null,new Object[]{"P.ID","Clinic","Date","time"}));
         //populate table
         appointment.fillappointmentTable(jTable1);
         
@@ -362,14 +358,11 @@ public class Appointment extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox jComboBox4;
     private com.toedter.calendar.JDateChooser jDateChooser2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
