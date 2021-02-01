@@ -1,1 +1,1 @@
-import sql file to the xampp
+import sql file to the xampp -->hospital.sql-->open xampp and go to localhost-->go to import and chose the sql file
