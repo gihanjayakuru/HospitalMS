@@ -64,7 +64,6 @@ public class Register extends javax.swing.JPanel {
         jButtonSave = new javax.swing.JButton();
         jButtonEdit = new javax.swing.JButton();
         jButtonRemove = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
@@ -186,13 +185,14 @@ public class Register extends javax.swing.JPanel {
         });
         jPanel1.add(jButtonRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 460, 60, 60));
 
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Search");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 40, 20));
-
         jTextField6.setForeground(new java.awt.Color(255, 255, 255));
         jTextField6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jTextField6.setOpaque(false);
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
         jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextField6KeyReleased(evt);
@@ -400,6 +400,10 @@ public class Register extends javax.swing.JPanel {
         
     }//GEN-LAST:event_jTextField6KeyReleased
 
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonEdit;
@@ -411,7 +415,6 @@ public class Register extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

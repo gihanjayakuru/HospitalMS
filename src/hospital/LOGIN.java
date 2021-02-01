@@ -50,13 +50,17 @@ public class LOGIN extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("LOGIN");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/4.png"))); // NOI18N
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setContentAreaFilled(false);
+        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/4.png"))); // NOI18N
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/4.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 60, 60));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User ID :");

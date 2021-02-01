@@ -39,7 +39,6 @@ public class reception extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         sidepnl = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         panel1 = new javax.swing.JPanel();
 
@@ -96,19 +95,6 @@ public class reception extends javax.swing.JFrame {
         });
         sidepnl.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, -1, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Doctors Status.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setPreferredSize(new java.awt.Dimension(200, 60));
-        jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/click buttons/Doctors Status.png"))); // NOI18N
-        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/hover buttons/Doctors Status.png"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        sidepnl.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, -1));
-
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/normal button/Add to Clinic .png"))); // NOI18N
         jButton4.setToolTipText("");
         jButton4.setBorder(null);
@@ -121,7 +107,7 @@ public class reception extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 198, 200, 60));
+        sidepnl.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 200, 60));
 
         jPanel1.add(sidepnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
 
@@ -151,12 +137,6 @@ public class reception extends javax.swing.JFrame {
         // TODO add your handling code here:
         new CombinePanel(panel1, new panels.Register());
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        new CombinePanel(panel1, new panels.Status());
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -208,7 +188,6 @@ public class reception extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;

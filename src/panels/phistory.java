@@ -124,6 +124,11 @@ public class phistory extends javax.swing.JPanel {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 240, 20));
 
         jTextField2.setText("report diagnose name");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 140, 20));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -200,51 +205,6 @@ public class phistory extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
-        // TODO add your handling code here:
-        
-//        String value1 =jTextField1.getText().toString();
-//        
-//        DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
-//        TableRowSorter<DefaultTableModel> tro=new TableRowSorter<DefaultTableModel>(model);
-//        jTable1.setRowSorter(tro);
-//        tro.setRowFilter(RowFilter.regexFilter(value1));
-        
-        
-        
-        
-        try {
-            
-            PreparedStatement st;
-            ResultSet rs;
-            String Query="SELECT * FROM `patient_medi_list_history` WHERE `id`=?";
-            
-            st=myconnection.createConnection().prepareStatement(Query);
-            
-            st.setString(1, jTextField1.getText());
-            
-            rs=st.executeQuery();
-            if(rs.next()){
-            
-                String a=rs.getString("id");
-                jTextField2.setText(a);
-//                String b=rs.getString("p.name");
-//                jTextField5.setText(b);
-            
-            }
-  
-        } catch (SQLException ex) {
-            
-            JOptionPane.showMessageDialog(null, ex);
-            
-        }
-    }//GEN-LAST:event_jTextField1KeyReleased
-
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
          DefaultTableModel  model = (DefaultTableModel)jTable1.getModel();
@@ -279,6 +239,52 @@ public class phistory extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+        // TODO add your handling code here:
+
+        //        String value1 =jTextField1.getText().toString();
+        //
+        //        DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
+        //        TableRowSorter<DefaultTableModel> tro=new TableRowSorter<DefaultTableModel>(model);
+        //        jTable1.setRowSorter(tro);
+        //        tro.setRowFilter(RowFilter.regexFilter(value1));
+
+        try {
+
+            PreparedStatement st;
+            ResultSet rs;
+            String Query="SELECT * FROM `patient_medi_list_history` WHERE `id`=?";
+
+            st=myconnection.createConnection().prepareStatement(Query);
+
+            st.setString(1, jTextField1.getText());
+
+            rs=st.executeQuery();
+            if(rs.next()){
+
+                String a=rs.getString("id");
+                jTextField2.setText(a);
+                //                String b=rs.getString("p.name");
+                //                jTextField5.setText(b);
+
+            }
+
+        } catch (SQLException ex) {
+
+            JOptionPane.showMessageDialog(null, ex);
+
+        }
+    }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
