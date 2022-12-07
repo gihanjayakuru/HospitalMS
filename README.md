@@ -7,7 +7,6 @@ username-"Reception"&&password-"Reception"
 username-"StockManager"&&password-"StockManager"
 username-"Pharmecist"&&password-"Pharmecist"
 
-![i9hz2y061](https://user-images.githubusercontent.com/56676369/206269293-a492fe51-b31e-4463-9bba-6234551eb675.svg)
 
 this is simple java swing based project.
 It is not responsive.
